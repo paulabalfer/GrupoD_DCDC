@@ -9,6 +9,31 @@ Este dataset contiene los titulares y resoluciones publicadas por el **Ministeri
 
 ---
 
+## Reproducibility
+Para recrear este dataset, ejecuta el archivo `extraccion_datos_boe.py`:
+
+```bash
+# Clonar el repositorio
+git clone https://github.com/paulabalfer/GrupoD_DCDC.git
+cd GrupoD_DCDC
+
+# Crear un entorno virtual
+python -m venv venv
+
+# Activar el entorno virtual
+source venv/Scripts/activate   # Windows Git Bash
+# source venv/bin/activate     # Mac/Linux
+
+# Instalar dependencias
+pip install -r requirements.txt
+
+# Ejecutar el script de extracción
+python extraccion_datos_boe.py
+````
+
+Esto generará un archivo csv: dataset_boe_universidades.csv.
+
+
 ## How to use
 
 Para cargar y explorar el dataset en Python:
