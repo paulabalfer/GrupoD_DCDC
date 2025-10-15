@@ -59,7 +59,7 @@ Algunas fechas no tienen BOE publicado, por lo que pueden faltar registros.
 
 **Código:** MIT License. Puedes usar, copiar, modificar y distribuir el código libremente.
 
-**Datos:** Dominio Público / AAL (CC BY Compatible), según la información oficial del BOE.
+**Datos:**  CC-BY 4.0; Dominio Público / AAL (CC BY Compatible), según la información oficial del BOE.
 
 ## Citation / Acknowledgements
 
