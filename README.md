@@ -28,7 +28,7 @@ Este dataset contiene los titulares y resoluciones publicadas por el **Ministeri
 
 ---
 
-## Reproducción
+## Reproducibility
 Para recrear este dataset, ejecuta el archivo `extraccion_datos_boe.py`:
 
 ```bash
