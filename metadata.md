@@ -36,14 +36,15 @@ print(df.info())
 
 ## Variables / Columnas:
 
-Columna	Significado
-ID_Disposicion	Identificador único de la disposición publicada en el BOE.
-Fecha_Publicacion	Fecha exacta en la que se publicó la resolución o disposición en el BOE.
-Organo_Emisor	Nombre del órgano o ministerio que emitió la disposición.
-Titulo_Semantico	Título descriptivo o titular de la disposición, extraído del BOE.
-Año	Año de publicación de la disposición.
-Año_Semana	Año ISO y semana ISO correspondiente a la fecha de publicación (por ejemplo, 2025-42).
-Bloque_3dias	Índice que agrupa las fechas en bloques consecutivos de 3 días para análisis temporal.
+| Columna             | Significado                                                                            |
+| ------------------- | -------------------------------------------------------------------------------------- |
+| `ID_Disposicion`    | Identificador único de la disposición publicada en el BOE.                             |
+| `Fecha_Publicacion` | Fecha exacta en la que se publicó la resolución o disposición en el BOE.               |
+| `Organo_Emisor`     | Nombre del órgano o ministerio que emitió la disposición.                              |
+| `Titulo_Semantico`  | Título descriptivo o titular de la disposición, extraído del BOE.                      |
+| `Año`               | Año de publicación de la disposición.                                                  |
+| `Año_Semana`        | Año ISO y semana ISO correspondiente a la fecha de publicación. |
+| `Bloque_3dias`      | Índice que agrupa las fechas en bloques consecutivos de 3 días para análisis temporal. |
 
 ## Proceso de recolección:
 Se utilizó el script extraccion_datos_boe.py para descargar y parsear los sumarios diarios del BOE mediante su API pública (https://www.boe.es/datosabiertos/api/api.php).
