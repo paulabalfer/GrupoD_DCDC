@@ -60,8 +60,8 @@ Algunas fechas no tienen BOE publicado, por lo que pueden faltar registros.
 
 **Datos:** Dominio Público / AAL (CC BY Compatible), según la información oficial del BOE.
 
-Citation / Acknowledgements
+## Citation / Acknowledgements
 
-Datos extraídos del BOE: https://www.boe.es/datosabiertos/
+**Datos extraídos del BOE:** https://www.boe.es/datosabiertos/
 
 Agradecimientos al equipo docente y a Hugging Face por proporcionar la plataforma para datasets FAIR.
