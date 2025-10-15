@@ -24,7 +24,8 @@ cd GrupoD_DCDC
 pip install -r requirements.txt
 
 # Ejecutar el script de extracción
-python extraccion_datos_boe.py```
+python extraccion_datos_boe.py
+````
 
 Esto generará un archivo csv: dataset_boe_universidades.csv.
 
