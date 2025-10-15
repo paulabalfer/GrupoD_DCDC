@@ -74,6 +74,7 @@ bloques = df.groupby('Bloque_3dias')
 for bloque, datos in bloques:
     print(f"Bloque {bloque} contiene {len(datos)} registros")
     print(datos.head())
+```
 
 
 ## Collection and Preprocessing
