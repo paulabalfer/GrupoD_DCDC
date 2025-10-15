@@ -21,7 +21,7 @@ Este dataset permite estudiar la distribución temporal de las resoluciones y pu
 | `Organo_Emisor`     | Nombre del órgano o ministerio que emitió la disposición.                              |
 | `Titulo_Semantico`  | Título descriptivo o titular de la disposición, extraído del BOE.                      |
 | `Año`               | Año de publicación de la disposición.                                                  |
-| `Año_Semana`        | Año ISO y semana ISO correspondiente a la fecha de publicación (por ejemplo, 2025-42). |
+| `Año_Semana`        | Año ISO y semana ISO correspondiente a la fecha de publicación. |
 | `Bloque_3dias`      | Índice que agrupa las fechas en bloques consecutivos de 3 días para análisis temporal. |
 
 
