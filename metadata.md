@@ -23,17 +23,18 @@ df = pd.read_csv("dataset_boe_universidades.csv")
 print(df.head())
 
 # Información general del dataset
-print(df.info())```
+print(df.info())
+```
 
-Dataset Details
+## Dataset Details
 
-Fuente: BOE (Boletín Oficial del Estado), datos abiertos: https://www.boe.es/datosabiertos/
+**Fuente:** BOE (Boletín Oficial del Estado), datos abiertos: https://www.boe.es/datosabiertos/
 
-Periodo: 1995-2025
+**Periodo:** 1995-2025
 
-Número de registros: Depende de la ejecución completa del script de extracción (extraccion_datos_boe.py)
+**Número de registros:** Depende de la ejecución completa del script de extracción (extraccion_datos_boe.py)
 
-Variables / Columnas:
+## Variables / Columnas:
 
 Columna	Significado
 ID_Disposicion	Identificador único de la disposición publicada en el BOE.
@@ -44,20 +45,20 @@ Año	Año de publicación de la disposición.
 Año_Semana	Año ISO y semana ISO correspondiente a la fecha de publicación (por ejemplo, 2025-42).
 Bloque_3dias	Índice que agrupa las fechas en bloques consecutivos de 3 días para análisis temporal.
 
-Proceso de recolección:
-Se utilizó el script extraccion_datos_boe.py para descargar y parsear los sumarios diarios del BOE mediante su API pública.
+## Proceso de recolección:
+Se utilizó el script extraccion_datos_boe.py para descargar y parsear los sumarios diarios del BOE mediante su API pública (https://www.boe.es/datosabiertos/api/api.php).
 
-Limitaciones:
+## Limitaciones:
 
 La descarga completa puede tardar varias horas dependiendo de la conexión.
 
 Algunas fechas no tienen BOE publicado, por lo que pueden faltar registros.
 
-Licencia
+## Licencia
 
-Código: MIT License. Puedes usar, copiar, modificar y distribuir el código libremente.
+**Código:** MIT License. Puedes usar, copiar, modificar y distribuir el código libremente.
 
-Datos: Dominio Público / AAL (CC BY Compatible), según la información oficial del BOE.
+**Datos:** Dominio Público / AAL (CC BY Compatible), según la información oficial del BOE.
 
 Citation / Acknowledgements
 
