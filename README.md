@@ -92,7 +92,7 @@ Se utilizó el script extraccion_datos_boe.py para descargar y parsear los sumar
 ## Licencia
 
 	- Código: MIT License; Puedes usar, copiar, modificar y distribuir el código libremente.
-	- Datos extraídos del BOE: Dominio Público / AAL (CC BY Compatible) según la información oficial del BOE.
+	- Datos extraídos del BOE: CC-BY 4.0; Dominio Público / AAL (CC BY Compatible) según la información oficial del BOE.
 ## Notas
 	- La descarga completa (1995-2025) puede tardar varias horas dependiendo de la conexión.
 	- Si se interrumpe la ejecución puedes ajustar las fechas de inicio y fin en el script para reanudar la descarga.
