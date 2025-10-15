@@ -20,6 +20,13 @@ Para recrear este dataset, ejecuta el archivo `extraccion_datos_boe.py`:
 git clone https://github.com/paulabalfer/GrupoD_DCDC.git
 cd GrupoD_DCDC
 
+# Crear un entorno virtual
+python -m venv venv
+
+# Activar el entorno virtual
+source venv/Scripts/activate   # Windows Git Bash
+# source venv/bin/activate     # Mac/Linux
+
 # Instalar dependencias
 pip install -r requirements.txt
 
