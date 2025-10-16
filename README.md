@@ -1,32 +1,97 @@
-# Resoluciones del Ministerio de Universidades (1995-2025)
-
-## Dataset Summary
-Este dataset contiene los titulares y resoluciones publicadas por el **Ministerio de Universidades** en el **BOE (Boletín Oficial del Estado)** entre los años 1995 y 2025. Cada registro incluye información sobre la disposición, su fecha de publicación y el órgano emisor.  
-
-**Propósito:** Permitir el análisis temporal de resoluciones oficiales, identificar patrones de publicación y estudiar la distribución de titulares a lo largo de los años.  
-
-**Contexto:** Los datos provienen de los sumarios diarios del BOE, que se encuentran disponibles como datos abiertos.  
-
 ---
+license: cc-by-4.0
+task_categories:
+- text-classification
+language:
+- es
+tags:
+- legal
+pretty_name: Resoluciones del Ministerio de Universidades (1995-2025)
+size_categories:
+- 1K<n<10K
+---
+
+# Dataset Card for Resoluciones del Ministerio de Universidades (1995-2025)
+
+## Dataset Details
+
+### Dataset Description
+
+Este dataset contiene los titulares y resoluciones publicadas por el Ministerio de Universidades en el BOE (Boletín Oficial del Estado) entre 1995 y 2025. Cada registro incluye información sobre la disposición, su fecha de publicación, el órgano emisor y un índice que agrupa las fechas en bloques consecutivos de 3 días para análisis temporal.
+
+- **Curated by:** Paula Ballesteros, Irene Palomares y Julia Sáenz
+- **Language(s) (NLP):** Español
+- **License:** Datos: Dominio Público / AAL (CC BY Compatible). Código: MIT License
+
+### Dataset Sources
+
+- **Repository:** [https://github.com/paulabalfer/GrupoD_DCDC](https://github.com/paulabalfer/GrupoD_DCDC)
+- **Source:** BOE – sumarios diarios vía API pública
+
+## Uses
+
+### Direct Use
+
+- Análisis temporal de resoluciones oficiales
+- Estudios de patrones de publicación del Ministerio de Universidades
+- Agrupación por bloques de 3 días para análisis de frecuencia temporal
+
+### Out-of-Scope Use
+
+- Datos personales o información privada (no contiene)
+- Uso comercial sin respetar la licencia de los datos del BOE
 
 ## Dataset Structure
-- Formato: CSV
-- Número de columnas: 7
-- Número de registros: depende de la ejecución completa del script `extraccion_datos_boe.py`
 
-**Features / Columnas:**
+- **Formato:** CSV
+- **Número de columnas:** 7
+- **Número de registros:** Depende de la ejecución completa del script `extraccion_datos_boe.py`
 
-| Columna           | Tipo     | Descripción |
-|------------------|---------|------------|
-| `ID_Disposicion` | string  | Identificador único de la disposición publicada en el BOE. |
-| `Fecha_Publicacion` | datetime | Fecha exacta en la que se publicó la resolución o disposición en el BOE. |
-| `Organo_Emisor`  | string  | Nombre del órgano o ministerio que emitió la disposición. |
-| `Titulo_Semantico` | string | Título descriptivo o titular de la disposición, extraído del BOE. |
-| `Año`            | int     | Año de publicación de la disposición. |
-| `Año_Semana`     | string  | Año ISO y semana ISO correspondiente a la fecha de publicación (por ejemplo, 2025-42). |
-| `Bloque_3dias`   | int     | Índice que agrupa las fechas en bloques consecutivos de 3 días para análisis temporal. |
+### Columns / Features
 
----
+| Columna          | Tipo     | Descripción |
+|-----------------|---------|-------------|
+| ID_Disposicion  | string  | Identificador único de la disposición publicada en el BOE. |
+| Fecha_Publicacion | datetime | Fecha exacta en la que se publicó la resolución o disposición. |
+| Organo_Emisor   | string  | Nombre del órgano o ministerio que emitió la disposición. |
+| Titulo_Semantico | string  | Título descriptivo o titular de la disposición. |
+| Año             | int     | Año de publicación de la disposición. |
+| Año_Semana      | string  | Año ISO y semana ISO correspondiente a la fecha de publicación. |
+| Bloque_3dias    | int     | Índice que agrupa las fechas en bloques consecutivos de 3 días. |
+
+## Dataset Creation
+
+### Curation Rationale
+
+Se creó para analizar la distribución temporal de resoluciones del Ministerio de Universidades y estudiar patrones de publicación.
+
+### Source Data
+
+- **Data Collection and Processing:** Se utilizó el script `extraccion_datos_boe.py` que descarga y parsea los sumarios diarios del BOE mediante su API pública. Los datos se filtraron para el Ministerio de Universidades.
+- **Source data producers:** BOE (sumarios oficiales publicados diariamente)
+
+### Annotations
+
+No aplica, los datos son extraídos directamente del BOE sin anotaciones manuales.
+
+### Personal and Sensitive Information
+
+No contiene datos personales ni sensibles.
+
+## Bias, Risks, and Limitations
+
+- Algunas fechas pueden no tener publicaciones, por lo que faltan registros.
+- El dataset solo incluye el Ministerio de Universidades.
+
+### Recommendations
+
+- Puede tardar varias horas en descargarse completo.
+- Ajustar las fechas en el script si se interrumpe la descarga.
+
+## Citation / Acknowledgements
+
+- Datos: BOE – Dominio Público / AAL (CC BY Compatible)
+- Código: MIT License
 
 ## Reproducibility
 Para recrear este dataset, ejecuta el archivo `extraccion_datos_boe.py`:
@@ -75,24 +140,3 @@ for bloque, datos in bloques:
     print(f"Bloque {bloque} contiene {len(datos)} registros")
     print(datos.head())
 ```
-
-
-## Collection and Preprocessing
-
-Se utilizó el script extraccion_datos_boe.py para descargar y parsear los sumarios diarios del BOE mediante su API pública.
-
-### Notas sobre la recolección:
-
-- La descarga completa puede tardar varias horas dependiendo de la conexión.
-
-- Algunas fechas no tienen BOE publicado, por lo que pueden faltar registros.
-
-- Los datos fueron filtrados para el Ministerio de Universidades únicamente.
-
-## Licencia
-
-	- Código: MIT License; Puedes usar, copiar, modificar y distribuir el código libremente.
-	- Datos extraídos del BOE: CC-BY 4.0; Dominio Público / AAL (CC BY Compatible) según la información oficial del BOE.
-## Notas
-	- La descarga completa (1995-2025) puede tardar varias horas dependiendo de la conexión.
-	- Si se interrumpe la ejecución puedes ajustar las fechas de inicio y fin en el script para reanudar la descarga.
