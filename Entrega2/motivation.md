@@ -90,6 +90,26 @@ El análisis de la distribución de publicaciones por día de la semana muestra 
 El descenso de los fines de semana, especialmente el sábado, es coherente con la inactividad administrativa y la ausencia de nuevas resoluciones en días no laborables.
   
 #### 4.2 Análisis de sentimiento
+
+Otro de los análisis que hemos llevado acabo ha sido el análisis de sentimiento. No obstante, no esperábamos grandes resultados al ser un dataset con texto legal, con contenido mayoritariamente neutro. 
+Para realizar el análisis usamos un subconjunto de los datos por su coste computacional.
+
+Además, usamos tres modelos con distinto enfoque:
+
+- VADER (de nltk): rápido y comúnmente usado para análisis de sentimiento.
+
+ ![Análisis vader](./img_e2/vader.png)
+ 
+- cardiffnlp/twitter-xlm-roberta-base-sentiment: multilingüe y bueno para textos cortos.
+
+ ![Análisis roberta](./img_e2/roberta.png)
+ 
+- pysentimiento/robertuito-sentiment-analysis: está entrenado en español.
+
+ ![Análisis robertuito](./img_e2/robertuito.png)
+ 
+Como podemos ver en las gráficas todos los modelos detectan sentimiento neutro en la muestra del dataset, por lo que el análisis de sentimiento en nuestro caso no va a ser definitivo.
+
 #### 4.3 Distribución de tópicos
 
 ### Indicadores opcionales
