@@ -27,6 +27,7 @@ Proyecto_Universidades_BOE/
 │   │
 │   ├── Indicadores opcionales/
 │   │   └── DCDC_Pública_Privada.ipynb        # Clasificación y análisis por tipo de universidad
+|   |   └── DCDC_Provincias.ipynb             # Clasificación y análisis por pertenencia a provincia
 │   │
 │   ├── Limpieza de datos/
 │   │   ├── DCDC_E2_EDA.ipynb                 # Exploración y limpieza de datos
