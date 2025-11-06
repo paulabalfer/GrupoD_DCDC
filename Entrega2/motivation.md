@@ -153,6 +153,31 @@ Finalmente, los resultados del proceso fueron los siguientes:
 - No identificadas: 3.795
   
 #### 4.5 Clasificación por geolocalización
+
+La clasificación geográfica tiene como propósito determinar la localización territorial de cada disposición universitaria publicada en el BOE, identificando la provincia asociada a la universidad mencionada en el texto.  Este paso es esencial para estudiar la distribución regional de la actividad normativa universitaria, evaluar diferencias entre comunidades y explorar patrones de descentralización del sistema universitario español.
+
+Para la asignación provincial se elaboró un diccionario de universidades por provincia, junto con sus alias o denominaciones alternativas.  El proceso consistió en:
+
+Normalización de nombres: se sustituyeron las variantes lingüísticas en catalán, gallego o euskera por sus equivalentes en castellano (por ejemplo, “Universitat de València” → “Universidad de Valencia”).  
+Búsqueda de coincidencias textuales: se detectaron menciones a universidades dentro de cada titular del BOE, comparándolas con la lista oficial de instituciones reconocidas.  
+Asignación provincial: se añadió una columna booleana por provincia (1 si el titular menciona una universidad de esa provincia, 0 en caso contrario).  
+
+Dado que varias universidades poseen campus en distintas provincias, se decidió asignar solo la provincia correspondiente a la sede principal.   Esta decisión garantiza consistencia territorial y evita duplicidades en el conteo.
+
+Durante la validación se identificaron dos grupos principales de incidencias:
+
+
+Hay 2024 casos en los que no se ha detectado ninguna provincia en el titular. Estas filas corresponden a títulos que, pese a estar relacionados con el ámbito universitario, no contienen información que permita vincularlos a una provincia concreta.   Analizando estas filas vemos que se debe a que corresponden a: Resoluciones del Consejo de Universidades o del Ministerio, Anuncios genéricos sobre extravío o gestión de títulos… Es decir a textos que son administrativos y no dependen de una universidad concreta.  
+
+
+El segundo grupo de incidencias agrupa 409 casos en los que una misma universidad aparece vinculada a varias provincias. El ejemplo más frecuente es la Universidad del País Vasco (UPV/EHU). Esto podria deberse a la repetición del nombre, y al parecido de sus siglas con la Universidad Politécnica de Valencia. Las filas con múltiples provincias no son errores de detección, sino el resultado lógico de universidades pluri-provinciales y con nombres similares.
+
+Tras analizar los resultados podemos concluir que:
+La distribución de menciones por provincia muestra una alta concentración en Madrid, con más de 39.000 registros, muy por encima del resto. Esto se debe tanto a la presencia del Ministerio de Universidades y otros organismos estatales como al gran número de universidades ubicadas allí.
+Le siguen Valencia, Barcelona, Sevilla y Granada, que destacan como los principales polos universitarios regionales, concentrando una intensa actividad normativa y académica. En un segundo nivel se sitúan provincias como A Coruña, Bizkaia, Alicante, Zaragoza, Murcia o Salamanca, con una participación estable en la producción de disposiciones.
+Por el contrario, provincias como Ávila o Gipuzkoa presentan muy pocas menciones, lo que refleja una menor densidad institucional o la centralización de publicaciones en la sede principal de su comunidad autónoma.
+En conjunto, los datos confirman un patrón fuertemente centralizado, donde unas pocas provincias concentran la mayoría de las resoluciones universitarias publicadas en el BOE.
+
 #### 4.6 Clasificación temática asistida por LLM (Zero-shot)
 
 Con el objetivo de identificar qué temática predomina en cada titular, utilizamos modelos de Zero-shot Learning los cuales están diseñados con conocimiento “general” de forma que pueden enfrentarse a un ejemplo que nunca han visto y dar resultados útiles basados en él. 
