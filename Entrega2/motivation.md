@@ -115,6 +115,45 @@ Como podemos ver en las gráficas todos los modelos detectan sentimiento neutro 
 ### Indicadores opcionales
 
 #### 4.4 Clasificación por tipo de entidad (pública o privada)
+
+Uno de los análisis que quisimos realizar para tener más información de nuestro dataset, fue la clasificación por tipo de entidad (pública o privada) de las universidades nombradas. 
+
+Si bien existen en España tanto universidades públicas como privadas, la mayoría de disposiciones publicadas en el BOE se refieren a universidades públicas, porque son las que dependen directamente de la Administración y están sujetas a regulación estatal o autonómica.
+Las universidades privadas, al no formar parte de la estructura administrativa del Estado, solo aparecen en el BOE en situaciones muy concretas, como la creación o reconocimiento oficial de la universidad, la verificación o modificación de títulos para obtener carácter oficial, o la adscripción a centros públicos.
+Por ello, el dataset presenta un sesgo estructural hacia las universidades públicas, lo que debe tenerse en cuenta al interpretar los resultados y comparaciones por tipo de entidad.
+
+Para llevar a cabo esta clasificación, elaboramos manualmente dos listas que incluyen los nombres de todas las universidades españolas, diferenciando entre públicas y privadas.
+Durante el procesamiento del dataset, se identificaron las entidades universitarias mencionadas en los titulares y se comprobó si el nombre detectado aparecía en alguna de las listas predefinidas.
+Según el resultado, se asignó un valor binario en las columnas correspondientes:
+
+- 1 en la columna pública si la universidad estaba en la lista de entidades públicas, o
+
+- 1 en la columna privada si figuraba en la lista de privadas.
+
+Además, se incorporaron diccionarios de alias y equivalencias lingüísticas para normalizar los nombres de las universidades escritas en catalán o gallego, sustituyéndolos por su forma en castellano.
+De esta manera, nombres como “Universitat de València” o “Universidade de Santiago de Compostela” se unificaron como “Universidad de Valencia” y “Universidad de Santiago de Compostela”, asegurando su correcta correspondencia con las listas originales.
+
+El procesamiento se realizó por lotes y utilizando multiprocesamiento con el objetivo de optimizar el tiempo de ejecución y reducir la carga computacional.
+
+Los titulares que no pudieron clasificarse corresponden en su mayoría a consorcios o consejos universitarios, así como a escuelas universitarias y centros adscritos en los que no se especifica claramente la universidad de pertenencia.
+Tras una revisión manual de estas disposiciones, se identificaron escuelas universitarias públicas y privadas, y se creó un conjunto adicional de diccionarios de mapeo:
+
+- Las escuelas que incluyen nombres de ciudades se asociaron a las universidades públicas de esas ciudades.
+
+- Los consorcios públicos se clasificaron como públicos.
+
+- Los centros universitarios privados conocidos se marcaron como privados.
+
+- Los organismos o entidades sin clasificación clara se mantuvieron con valor 0 en ambas columnas.
+
+Finalmente, los resultados del proceso fueron los siguientes:
+
+- Universidades públicas identificadas: 151.997
+
+- Universidades privadas identificadas: 6.894
+
+- No identificadas: 3.795
+  
 #### 4.5 Clasificación por geolocalización
 #### 4.6 Clasificación temática asistida por LLM (Zero-shot)
 
@@ -144,12 +183,14 @@ Una vez obtenido el resultado creamos una columna en el conjunto de datos por ca
 
 - Los modelos pueden fallar con español administrativo o regional.
 - Algunos titulares son muy breves, lo que dificulta la clasificación semántica.
+- Presencia de lenguas cooficiales: varias universidades aparecen mencionadas tanto en castellano como en su idioma regional (por ejemplo, Universitat de Barcelona / Universidad de Barcelona o Universidade de Santiago de Compostela / Universidad de Santiago de Compostela).
+Esto puede generar duplicidades o afectar la detección semántica si el modelo no reconoce adecuadamente las variantes lingüísticas del catalán, gallego o euskera.
 
 **Sesgos potenciales:**
 
 - Temporal: algunos periodos (p. ej., cambios ministeriales) tienen más publicaciones.
 - De contenido: la gran mayoría de disposiciones son sobre universidades públicas.
-- Lingüístico: predominio del español formal, escasa variación dialectal.
+- Lingüístico: predominio del español formal, escasa variedad dialectal.
 
 **Consideraciones éticas:**
 
