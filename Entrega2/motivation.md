@@ -47,6 +47,38 @@ El procesamiento de los indicadores mostrados a continuación pueden encontrarse
 Para analizar el volumen temporal de publicaciones hemos visualizado los datos con diversas unidades temporales:
 
 - Tendencia anual
+ ![Volumen de disposiciones por año](./img_e2/volumen_año.png)
+
+En la gráfica se muestra una tendencia general de crecimiento, interrumpida por tres descensos significativos en los años 2005, 2014 y 2024.
+
+En 2005, se observa una reducción pronunciada respecto a los años anteriores. Este descenso podría asociarse con procesos de reestructuración administrativa y cambios en la gestión universitaria derivados de la adaptación al Espacio Europeo de Educación Superior (EEES), conocido como Plan Bolonia, así como con las primeras fases de digitalización del Boletín Oficial del Estado, que comenzaron a introducirse progresivamente a mediados de la década de 2000.
+
+La caída de 2014 coincide con un periodo de ajuste institucional y económico posterior a la crisis financiera de 2008–2013. En estos años se produjeron recortes en la contratación pública y una menor actividad administrativa, lo que probablemente redujo el número de resoluciones y convocatorias emitidas.
+
+Finalmente, la disminución observada en 2024 parece responder a un efecto de datos incompletos, ya que los registros correspondientes al año más reciente no siempre se encuentran completamente disponibles en las fuentes abiertas.
+
+- Tendencia trimestral
+ ![Volumen de disposiciones por timestre](./img_e2/vol_trimestre.png)
+Aquí vemos más detalladamente una tendencia similar a la vista anualmente.
+
+- Tendencia mensual
+ ![Volumen de disposiciones por mes](./img_e2/vol_mes.png)
+
+El análisis del volumen de disposiciones por mes revela un comportamiento estacional marcado en la actividad administrativa. En general, los meses de marzo, julio y noviembre presentan picos significativos en el número de resoluciones publicadas, mientras que septiembre muestra de forma consistente el menor volumen del año.
+
+Este patrón puede explicarse por la organización del calendario administrativo y académico. Los aumentos de marzo y julio suelen coincidir con cierres de periodos administrativos o académicos, momentos en los que se concentran resoluciones de contratación, convocatorias y nombramientos. El incremento en noviembre puede vincularse con el cierre del ejercicio presupuestario y la necesidad de publicar disposiciones antes del fin de año.
+
+Por el contrario, la caída en septiembre se explica probablemente por la pausa veraniega y la lenta reactivación de la actividad administrativa tras las vacaciones. En esos días, muchas oficinas aún no han retomado su ritmo habitual, lo que reduce el número de publicaciones. Este patrón se repite cada año, lo que indica que existe un comportamiento estacional regular en las disposiciones oficiales.
+
+- Tendencia por bloque de 3 días
+ ![Volumen de disposiciones por bloque de 3 días](./img_e2/vol_bloque.png)
+De este gráfico no podemos obtener muchas conclusiones todavía, quizá podamos distinguir el periodo que coincide con los años ya mencionados (2005, 2014) con una reducción en el número de disposiciones.
+
+- Tendencia por día de la semana
+ ![Volumen de disposiciones por dia de la semana](./img_e2/vol_dia_semana.png)
+El análisis de la distribución de publicaciones por día de la semana muestra que la mayor actividad se concentra los martes y los jueves, mientras que los sábados presentan el volumen más bajo. Aunque las diferencias no son muy pronunciadas —en torno a unas 2.000 disposiciones más respecto a otros días—, el patrón refleja el funcionamiento habitual de la administración pública, con mayor carga de trabajo y publicación en los días centrales de la semana.
+
+El descenso de los fines de semana, especialmente el sábado, es coherente con la inactividad administrativa y la ausencia de nuevas resoluciones en días no laborables.
   
 #### 4.2 Análisis de sentimiento
 #### 4.3 Distribución de tópicos
