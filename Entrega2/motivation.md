@@ -25,7 +25,9 @@ Para ello, se procesan los titulares en español con el fin de identificar la ev
 - Idioma: Español
 
 **Relevancia:**
-El conjunto contiene todos los titulares del BOE relacionados con el Ministerio de Universidades en el periodo indicado. Cada registro incluye referencias a universidades, comunidades autónomas o provincias, lo que permite realizar análisis temáticos, sentimentales y geográficos sobre las publicaciones oficiales.
+El conjunto de datos es relevante porque permite analizar la evolución del discurso institucional y normativo del Ministerio de Universidades durante casi tres décadas. Al contener todos los titulares publicados en el BOE, ofrece una fuente oficial, homogénea y longitudinal que refleja las prioridades, políticas y cambios temáticos del sistema universitario español.
+Además, al incluir menciones a universidades concretas, comunidades autónomas y provincias, posibilita examinar diferencias territoriales y tipológicas (pública/privada) en la atención institucional.
+Esto lo convierte en una base valiosa para estudiar tendencias temáticas, frecuencia de publicación y tono institucional a lo largo del tiempo.
 
 **Criterios de selección:**
 
@@ -42,6 +44,10 @@ Contenido textual adecuado para tareas de modelado de tópicos y sentimiento.
 El procesamiento de los indicadores mostrados a continuación pueden encontrarse en la carpta "Indicadores obligatorios" en esta misma carpeta. 
 
 #### 4.1 Volumen temporal de publicaciones
+Para analizar el volumen temporal de publicaciones hemos visualizado los datos con diversas unidades temporales:
+
+- Tendencia anual
+  
 #### 4.2 Análisis de sentimiento
 #### 4.3 Distribución de tópicos
 
