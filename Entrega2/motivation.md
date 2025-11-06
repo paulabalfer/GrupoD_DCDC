@@ -31,11 +31,9 @@ Esto lo convierte en una base valiosa para estudiar tendencias temáticas, frecu
 
 **Criterios de selección:**
 
-Representatividad temporal adecuada (30 años de datos continuos).
-
-Volumen suficiente para análisis estadísticos robustos.
-
-Contenido textual adecuado para tareas de modelado de tópicos y sentimiento.
+- Representatividad temporal adecuada (30 años de datos continuos).
+- Volumen suficiente para análisis estadísticos robustos.
+- Contenido textual adecuado para tareas de modelado de tópicos y sentimiento.
 
 ## 4. Justificación de los Indicadores Calculados
 
