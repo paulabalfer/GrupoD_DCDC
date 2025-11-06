@@ -20,17 +20,17 @@ De la columna Fecha_Publicacion obtenemos:
 - **Trimestre:** trimestre a la que pertenece cada disposición 
 - **Bloque temporal de 3 días:** creamos bloques de 3 días siendo estos de lunes a miércoles y de jueves a domingo (aunque los domingos no hay disposiciones). Usamos esta unidad para el posterior análisis temporal ya que nos proporciona suficientes entradas para un análisis coherente (alrededor de unas 3300 entradas). 
 
-![Volumen de disposiciones por bloque de 3 días](./img/volumen_por_bloque.png)
+![Volumen de disposiciones por bloque de 3 días](./img_e2/volumen_por_bloque.png)
 
 - Día de la semana: también añadimos una columna correspondiente al día de la semana para analizar el volumen por día.
 
-![Volumen de disposiciones por dia de la semana](./img/volumen_dia_semana.png)
+![Volumen de disposiciones por dia de la semana](./img_e2/volumen_dia_semana.png)
 
 ### 4. Longitud de los títulos
 Finalmente, creamos una columna con el número de palabras de cada título. 
 Aprovechamos para analizar la longitud media de disposiciones con el paso de los años:
 
-![Longitud medio de título por año](./img/longitud_titulo_año.png)
+![Longitud medio de título por año](./img_e2/longitud_titulo_año.png)
 
 Como vemos en la gráfica, a lo largo del tiempo se ha ido reduciendo la longitud de las disposiciones.
 
