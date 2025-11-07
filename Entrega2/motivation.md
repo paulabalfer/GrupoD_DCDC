@@ -213,6 +213,12 @@ Una vez obtenido el resultado creamos una columna en el conjunto de datos por ca
 - Presencia de lenguas cooficiales: varias universidades aparecen mencionadas tanto en castellano como en su idioma regional (por ejemplo, Universitat de Barcelona / Universidad de Barcelona o Universidade de Santiago de Compostela / Universidad de Santiago de Compostela).
 Esto puede generar duplicidades o afectar la detección semántica si el modelo no reconoce adecuadamente las variantes lingüísticas del catalán, gallego o euskera.
 
+**Limitaciones geográficas:**
+
+- La asignación de provincias se basa en coincidencias textuales y reglas predefinidas, lo que puede producir errores cuando un titular menciona universidades con presencia en varias sedes o cuando el texto no incluye referencias geográficas claras.
+- Algunas universidades, especialmente las a distancia (como la UNED o la Universidad Internacional de La Rioja), presentan ambigüedad en su localización, ya que operan a nivel nacional. Al tomar la decisión de considerar unicámente la sede nos exponemos a una posible pérdida de precisión geográfica. Esto puede subrepresentar la actividad universitaria en otras zonas donde también tienen impacto académico o administrativo.
+- Los alias y siglas pueden generar falsos positivos si aparecen en otros contextos (por ejemplo, abreviaturas coincidentes o topónimos homónimos).
+
 **Sesgos potenciales:**
 
 - Temporal: algunos periodos (p. ej., cambios ministeriales) tienen más publicaciones.
