@@ -7,7 +7,7 @@ Para ello, se procesan los titulares en español con el fin de identificar la ev
 
 ## 2. Pregunta de Investigación e Hipótesis
 
-**Hipótesis principal:**
+### **Hipótesis principal:**
 
 “La proporción de titulares relacionados con la creación o modificación de títulos universitarios aumenta significativamente entre 2008 y 2024, coincidiendo con la implantación del Espacio Europeo de Educación Superior (EEES) y la posterior expansión de los másteres oficiales.”
 
@@ -17,14 +17,14 @@ Para ello, se procesan los titulares en español con el fin de identificar la ev
 
 ## 3. Justificación del Dataset
 
-**Origen y características**
+### **Origen y características**
 
 - Fuente: pauDCDC/boe_universidades
 - Tamaño: 162.576 ejemplos
 - Periodo temporal: 1995–2024
 - Idioma: Español
 
-**Relevancia:**
+### **Relevancia:**
 El conjunto de datos es relevante porque permite analizar la evolución del discurso institucional y normativo del Ministerio de Universidades durante casi tres décadas. Al contener todos los titulares publicados en el BOE, ofrece una fuente oficial, homogénea y longitudinal que refleja las prioridades, políticas y cambios temáticos del sistema universitario español.
 Además, al incluir menciones a universidades concretas, comunidades autónomas y provincias, posibilita examinar diferencias territoriales y tipológicas (pública/privada) en la atención institucional.
 Esto lo convierte en una base valiosa para estudiar tendencias temáticas, frecuencia de publicación y tono institucional a lo largo del tiempo.
