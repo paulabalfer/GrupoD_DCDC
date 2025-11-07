@@ -43,5 +43,5 @@ Proyecto_Universidades_BOE/
 |   └── data_cleaning.md                          # Documentación del proceso de limpieza
 │   └── motivation.md                             # Documento de motivación, hipótesis y justificación
 │
-└── README.md                                 # Descripción general del proyecto y estructura del repo
+└── README.md                                 # Descripción general del proyecto y estructura del repositorio
 ```
