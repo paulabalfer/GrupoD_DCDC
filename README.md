@@ -29,6 +29,7 @@ Proyecto_Universidades_BOE/
 │   ├── Indicadores obligatorios/
 │   │   ├── DCDC_Análisis_Volumen.ipynb       # Análisis del volumen temporal de publicaciones
 │   │   └── DCDC_Análisis_sentimiento.ipynb   # Análisis de sentimiento con modelos en español
+│   │   └── DCDC_Análisis_de_tópicos_LDA.ipynb   # Análisis de sentimiento con modelos en español
 │   │
 │   ├── Indicadores opcionales/
 │   │   └── DCDC_Pública_Privada.ipynb              # Clasificación y análisis por tipo de universidad
