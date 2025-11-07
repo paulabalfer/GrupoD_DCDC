@@ -11,7 +11,7 @@ Para ello, se procesan los titulares en español con el fin de identificar la ev
 
 “Entre 1995 y 2024, la proporción de titulares del BOE relacionados con tecnología en universidades públicas de la Comunidad de Madrid aumenta moderadamente (≈ +1.1% anual), mientras que los relativos a empleo muestran una tendencia variable con disminución general (≈ -2.3% anual), lo que sugiere un cambio gradual de foco institucional desde temas laborales hacia la innovación tecnológica.”
 
-**Pregunta de investigación asociada:**
+**Preguntas de investigación asociadas:**
 
 - ¿Existen diferencias en la distribución temática de los titulares del BOE según la comunidad autónoma o el tipo de universidad (pública/privada)?
 - ¿En qué porcentaje aparecen las diferentes combinaciones de temática-tipo de universidad-provincia con el paso de los años? ¿Dicho porcentaje de aparición crece o disminuye?
