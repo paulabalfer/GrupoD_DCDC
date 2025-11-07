@@ -111,6 +111,20 @@ Como podemos ver en las gráficas todos los modelos detectan sentimiento neutro 
 
 #### 4.3 Distribución de tópicos
 
+Abordamos el analisis de topicos(LDA) con el objetivo de identificar patrones temáticos en los titulares del BOE. Aplicamos un modleo de Latent Dirichlet Allocation (LDA) sobre los titulares ya procesados lingüisticamente. El análisis se realizó segmentado por quinquenios, con el fin de observar posibles cambios temáticos a lo largo del tiempo.
+
+El preprocesamiento textual lo realizamos con spaCy, su modelo es_core_news_sm. Aplicando lematización, eliminación de puntuación, stopwords y tokens de longitud reducida. Posteriormente, los textos se transformaron en una representación numérica mediante el modelo de Bolsa de Palabras (Bag of Words) mediante CountVectorizer, filtrando términos muy raros o demasiado frecuentes. Cada documento (titular) se convierte en un vector donde cada posición indica la frecuencia de una palabra en el corpus. El tamaño final del vocabulario, tras la depuración, fue de aproximadamente 7.000 términos.
+
+Para cada quinquenio entre 1995 y 2024 se entrenó un modelo LDA con ocho tópicos. El resultado mostró que los términos más frecuentes se repetían sistemáticamente entre periodo sin aportar distinciones temáticas claras entre etapas. Aunque el procedimiento técnico fue correcto, los resultados no nos aportan información suficientemente significativa  desde el punto de vista semántico o analítico. Esto se debe a varios factores estructurales del propio corpus:
+
+- Uniformidad del lenguaje administrativo: Los titulares del BOE mantienen un formato legal rígido y repetitivo, centrado en expresiones formales, lo que introduce un fuerte sesgo estilístico.
+
+- Escasa diversidad léxica: Muchos textos se limitan a describir actos administrativos o resoluciones sin aportar contenido temático.
+
+- Presencia sistemática de nombres institucionales: Los términos de universidades, cargos o áreas de conocimiento aparecen de forma redundante, generando tópicos centrados en nombres propios.
+
+En consecuencia, el análisis de tópicos con LDA no permite extraer información sustantiva sobre los temas tratados en las disposiciones del BOE.
+
 ### Indicadores opcionales
 
 #### 4.4 Clasificación por tipo de entidad (pública o privada)
