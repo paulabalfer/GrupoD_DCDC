@@ -179,6 +179,8 @@ La distribución de menciones por provincia muestra una alta concentración en M
 
 En conjunto, los datos confirman un patrón fuertemente centralizado, donde unas pocas provincias concentran la mayoría de las resoluciones universitarias publicadas en el BOE.
 
+ ![Distribución de universidades por provincia](./img_e2/Distribución_provincias.png)
+
 #### 4.6 Clasificación temática asistida por LLM (Zero-shot)
 
 Con el objetivo de identificar qué temática predomina en cada titular, utilizamos modelos de Zero-shot Learning los cuales están diseñados con conocimiento “general” de forma que pueden enfrentarse a un ejemplo que nunca han visto y dar resultados útiles basados en él. 

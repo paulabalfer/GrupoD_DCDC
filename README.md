@@ -12,6 +12,12 @@ La estructura sería:
 ```text
 Proyecto_Universidades_BOE/
 │
+├── data/
+|   ├── raw/
+|   |   └── dataset_boe_universidades.csv               # Conjunto de datos original (Resultado de la entrega 1) 
+|   └── processed/
+|       └── dataset_boe_universidades_processed.csv     # Conjunto de datos procesado y exclusivamente numérico (Resultado de la entrega 2)
+|
 ├── Entrega1/
 │   ├── LICENSE
 │   ├── README.md
@@ -22,19 +28,20 @@ Proyecto_Universidades_BOE/
 ├── Entrega2/
 │   ├── Indicadores obligatorios/
 │   │   ├── DCDC_Análisis_Volumen.ipynb       # Análisis del volumen temporal de publicaciones
-│   │   ├── DCDC_Análisis_de_tópicos.ipynb    # Modelado de tópicos (LDA)
 │   │   └── DCDC_Análisis_sentimiento.ipynb   # Análisis de sentimiento con modelos en español
 │   │
 │   ├── Indicadores opcionales/
-│   │   └── DCDC_Pública_Privada.ipynb        # Clasificación y análisis por tipo de universidad
-|   |   └── DCDC_Provincias.ipynb             # Clasificación y análisis por pertenencia a provincia
+│   │   └── DCDC_Pública_Privada.ipynb              # Clasificación y análisis por tipo de universidad
+|   |   └── DCDC_Provincias.ipynb                   # Clasificación y análisis por pertenencia a provincia
+|   |   └── DCDC_Modelos_Zeroshot_Learning.ipynb    # Clasificación y análisis por temática con modelos asistidos por LLMs
 │   │
 │   ├── Limpieza de datos/
-│   │   └── DCDC_E2_EDA.ipynb             # Exploración y limpieza de datos
+│   │   └── DCDC_E2_EDA.ipynb            # Exploración y limpieza de datos
 │   │
-│   └── img_e2/                           # Carpeta con imágenes y gráficos generados 
-|   └── data_cleaning.md                  # Documentación del proceso de limpieza
-│   └── motivation.md                         # Documento de motivación, hipótesis y justificación
+│   └── img_e2/                                   # Carpeta con imágenes y gráficos generados 
+│   └── DCDC_Preparacion_conjunto_final.ipynb     # Unión de todos los análisis y reconstrucción del dataset final + análisis de hipótesis
+|   └── data_cleaning.md                          # Documentación del proceso de limpieza
+│   └── motivation.md                             # Documento de motivación, hipótesis y justificación
 │
 └── README.md                                 # Descripción general del proyecto y estructura del repo
 ```
