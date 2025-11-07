@@ -30,10 +30,10 @@ Proyecto_Universidades_BOE/
 |   |   └── DCDC_Provincias.ipynb             # Clasificación y análisis por pertenencia a provincia
 │   │
 │   ├── Limpieza de datos/
-│   │   ├── DCDC_E2_EDA.ipynb                 # Exploración y limpieza de datos
-│   │   ├── img_e2/                           # Carpeta con imágenes y gráficos generados
-│   │   └── data_cleaning.md                  # Documentación del proceso de limpieza
+│   │   └── DCDC_E2_EDA.ipynb             # Exploración y limpieza de datos
 │   │
+│   └── img_e2/                           # Carpeta con imágenes y gráficos generados 
+|   └── data_cleaning.md                  # Documentación del proceso de limpieza
 │   └── motivation.md                         # Documento de motivación, hipótesis y justificación
 │
 └── README.md                                 # Descripción general del proyecto y estructura del repo
