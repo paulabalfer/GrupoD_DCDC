@@ -9,11 +9,12 @@ Para ello, se procesan los titulares en español con el fin de identificar la ev
 
 ### **Hipótesis principal:**
 
-“La proporción de titulares relacionados con la creación o modificación de títulos universitarios aumenta significativamente entre 2008 y 2024, coincidiendo con la implantación del Espacio Europeo de Educación Superior (EEES) y la posterior expansión de los másteres oficiales.”
+“Entre 1995 y 2024, la proporción de titulares del BOE relacionados con tecnología en universidades públicas de la Comunidad de Madrid aumenta moderadamente (≈ +1.1% anual), mientras que los relativos a empleo muestran una tendencia variable con disminución general (≈ -2.3% anual), lo que sugiere un cambio gradual de foco institucional desde temas laborales hacia la innovación tecnológica.”
 
 **Pregunta de investigación asociada:**
 
 - ¿Existen diferencias en la distribución temática de los titulares del BOE según la comunidad autónoma o el tipo de universidad (pública/privada)?
+- ¿En qué porcentaje aparecen las diferentes combinaciones de temática-tipo de universidad-provincia con el paso de los años? ¿Dicho porcentaje de aparición crece o disminuye?
 
 ## 3. Justificación del Dataset
 
@@ -187,11 +188,11 @@ Con el objetivo de identificar qué temática predomina en cada titular, utiliza
 
 Entrenamos en un pequeño fragmento del conjunto de datos tres modelos diferentes para poder compararlos y ver cuál aparentemente funciona mejor: 
 
-- MoritzLaurer/deberta-v3-base-zeroshot-v1.1-all-33: que funciona analizando la similitud semántica entre un texto de entrada y varias etiquetas propuestas, seleccionando la etiqueta que mejor se alinea conceptualmente con el texto. Se basa en el modelo DeBERTa, pero entrenado específicamente para tareas de clasificación múltiple (fine-tunning) comparando directamente el texto con las posibles clases que le proporciones. Está además entrenado de forma multilingüe (aunque es más fuerte en inglés) dado que ha visto ejemplos en varios idiomas durante su especialización, no solo durante el pre-entrenamiento base.
+- **MoritzLaurer/deberta-v3-base-zeroshot-v1.1-all-33**: que funciona analizando la similitud semántica entre un texto de entrada y varias etiquetas propuestas, seleccionando la etiqueta que mejor se alinea conceptualmente con el texto. Se basa en el modelo DeBERTa, pero entrenado específicamente para tareas de clasificación múltiple (fine-tunning) comparando directamente el texto con las posibles clases que le proporciones. Está además entrenado de forma multilingüe (aunque es más fuerte en inglés) dado que ha visto ejemplos en varios idiomas durante su especialización, no solo durante el pre-entrenamiento base.
   
-- MoritzLaurer/deberta-v3-large-zeroshot-v1: modelo muy similar al anterior también basado en DeBERTa y con alto rendimiento en clasificación multi-clase (trabaja con múltiples etiquetas simultáneamente), bajo la que asigna una probabilidad a cada clase y elige la más adecuada incluso si son conceptualmente similares. Está optimizado además para baja latencia equilibrando precisión y eficiencia computacional y entrenado para comprender mejor relaciones sintácticas y estructuras gramaticales complejas.
+- **MoritzLaurer/deberta-v3-large-zeroshot-v1**: modelo muy similar al anterior también basado en DeBERTa y con alto rendimiento en clasificación multi-clase (trabaja con múltiples etiquetas simultáneamente), bajo la que asigna una probabilidad a cada clase y elige la más adecuada incluso si son conceptualmente similares. Está optimizado además para baja latencia equilibrando precisión y eficiencia computacional y entrenado para comprender mejor relaciones sintácticas y estructuras gramaticales complejas.
 
-- Recognai/zeroshot_selectra_medium: modelo específicamente diseñado para el español y que interpreta las categorías basándose en su conocimiento del idioma. Basado en un modelo Selectra pre-entrenado y especificado en tareas de clasificación para aprender a relacionar textos en español con diferentes categorías; su versión “Medium” ofrece un buen equilibrio entre rendimiento y eficiencia computacional siendo más rápido pero manteniendo buena precisión. Entiende particularidades del español como modismos, dobles sentidos, y registros formales/informales típicos del idioma.
+- **Recognai/zeroshot_selectra_medium**: modelo específicamente diseñado para el español y que interpreta las categorías basándose en su conocimiento del idioma. Basado en un modelo Selectra pre-entrenado y especificado en tareas de clasificación para aprender a relacionar textos en español con diferentes categorías; su versión “Medium” ofrece un buen equilibrio entre rendimiento y eficiencia computacional siendo más rápido pero manteniendo buena precisión. Entiende particularidades del español como modismos, dobles sentidos, y registros formales/informales típicos del idioma.
   
 Con estos tres modelos creamos entonces un pequeño dataset procesado y vemos en los resultados que, aparentemente, el segundo modelo parece funcionar mejor puesto que siempre está “de acuerdo” con alguno de los otros dos (clasifican la misma temática/categoría como predominante). Usando un mecanismo de “consenso basado en triple medición” y debido a nuestra capacidad computacional limitada (no resulta viable procesar todo con los 3 modelos) decidimos procesar el conjunto entero de datos con dicho segundo modelo (“MoritzLaurer/deberta-v3-large-zeroshot-v1”) de cara a obtener un valor asociado a cada categoría para cada titular. 
 
@@ -215,7 +216,7 @@ Esto puede generar duplicidades o afectar la detección semántica si el modelo 
 **Sesgos potenciales:**
 
 - Temporal: algunos periodos (p. ej., cambios ministeriales) tienen más publicaciones.
-- De contenido: la gran mayoría de disposiciones son sobre universidades públicas.
+- De contenido: la gran mayoría de disposiciones son sobre universidades públicas. Las universidades privadas, al no formar parte de la estructura administrativa del Estado, solo aparecen en el BOE en situaciones muy concretas, como la creación o reconocimiento oficial de la universidad, la verificación o modificación de títulos para obtener carácter oficial, o la adscripción a centros públicos.
 - Lingüístico: predominio del español formal, escasa variedad dialectal.
 
 **Consideraciones éticas:**
