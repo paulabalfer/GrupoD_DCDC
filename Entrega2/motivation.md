@@ -179,7 +179,7 @@ La distribución de menciones por provincia muestra una alta concentración en M
 
 En conjunto, los datos confirman un patrón fuertemente centralizado, donde unas pocas provincias concentran la mayoría de las resoluciones universitarias publicadas en el BOE.
 
-(./img_e2/Distribución_provincias.png)
+ ![Distribución de universidades por provincia](./img_e2/Distribución_provincias.png)
 
 #### 4.6 Clasificación temática asistida por LLM (Zero-shot)
 
