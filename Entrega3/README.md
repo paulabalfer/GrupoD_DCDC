@@ -12,4 +12,9 @@ En esta sección analizamos la volatilidad de la influencia de tecnología y emp
 
 ### 3.1 Tecnología
 En primer lugar, llevamos a cabo el test ADF, con los valores de 1%, 5% y 10% vemos que nuestro ADF statistic (-15.78) es mucho menor que el nivel 1% (-3.43), nivel 5% (-2.86) y el nivel 10% (-2.56), lo que nos confirma que la serie es estacionaria con un nivel de confianza altísimo, perfecto para aplicar GARCH.
+
+**Retornos**
+Después calculamos los retornos
+ ![Retornos tec](./imgs/retornos_tec.png)
+ 
 ## Conclusiones
