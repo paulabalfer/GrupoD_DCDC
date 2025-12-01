@@ -20,5 +20,23 @@ Después calculamos los retornos
 Y representamos el PACF, Partial Autocorrelation Function (Función de Autocorrelación Parcial), que es una herramienta que nos ayuda a entender cómo una serie temporal se relaciona consigo misma en distintos periodos de tiempo. 
 
  ![PACF tec](./imgs/PACF_tec.png)
- 
+
+Vemos tres picos sobre salientes de la zona de confianza, el 1, 27 y 29. El primero de ellos es negativo, esto podría indicar que si un día (o periodo) se publica una disposición con una influencia tecnológica muy alta, es muy probable que la disposición del periodo siguiente tenga una influencia baja (y viceversa). Los lag del 27 y el 29 indican que existe un patrón cíclico. La influencia de la tecnología tiende a repetirse o "hacer eco" cada 27-29 periodos. Unos 27-30 días es aproximadamente un mes. Esto podría sugerir que ciertos informes, subvenciones o normativas tecnológicas se publican en ciclos mensuales (por ejemplo, a finales o principios de mes).
+
+Una vez tenemos los retornos, calculamos el modelo GARCH con p=1 y q=1. Sin embargo, añadimos rescale=True ya que, de lo contrario, la escala es muy grande y los valores de alfa y beta pueden ser 0.0000 porque pierde capacidad de representación. 
+Al eliminar el ruido (rescale=True), hay un "nivel base" de influencia tecnológica constante. No oscila alrededor de cero; la tecnología siempre está presente con una intensidad base en las disposiciones. La media mu (2.5475) indica que al ser un número positivo y estadísticamente significativo, el modelo rechaza la idea de que la influencia sea estática (cero) o decreciente, lo que concuerda con nuestra hipótesis de que la influencia de la tecnología aumenta.
+
+Según los resultados de omega (22.5497), alpha (4.76e-04), podemos interpretar que la volatilidad de las disposiciones tecnológicas en el BOE no depende tanto de shocks inmediatos, ya que alpha es prácticamente cero y no significativo. Esto indica que un pico repentino en titulares o disposiciones tecnológicas no genera un aumento fuerte e inmediato de la variabilidad.
+
+En cambio, la volatilidad depende principalmente de la volatilidad pasada, como muestra el valor elevado de beta (≈ 0.89). Esto significa que cuando la actividad tecnológica del BOE entra en una fase más variable —por ejemplo, semanas con muchas disposiciones heterogéneas— esa variabilidad tiende a persistir y extenderse en el tiempo, propagándose a días siguientes.
+
+**Predicción del futuro**
+
+Tras comparar distintas configuraciones del modelo GARCH y probar tanto la distribución normal como la t-Student, observamos que, aunque algunos modelos más complejos pueden ajustar ligeramente mejor, la serie presenta picos puntuales y la volatilidad no tiene memoria fuerte. Por esta razón, para predecir el futuro utilizaremos GARCH(1,1), ya que es suficiente, estable y más fácil de interpretar que modelos con valores mayores de p y q.
+
+
+
 ## Conclusiones
+AQUÍ PONER
+hipótesis apoyada o refutada. 
+▪ Limitaciones y posibles mejoras. 
