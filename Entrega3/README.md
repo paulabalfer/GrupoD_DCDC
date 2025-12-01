@@ -16,5 +16,9 @@ En primer lugar, llevamos a cabo el test ADF, con los valores de 1%, 5% y 10% ve
 **Retornos**
 Después calculamos los retornos
  ![Retornos tec](./imgs/retornos_tec.png)
+
+Y representamos el PACF, Partial Autocorrelation Function (Función de Autocorrelación Parcial), que es una herramienta que nos ayuda a entender cómo una serie temporal se relaciona consigo misma en distintos periodos de tiempo. 
+
+ ![PACF tec](./imgs/PACF_tec.png)
  
 ## Conclusiones
