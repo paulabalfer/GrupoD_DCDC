@@ -40,6 +40,19 @@ El pronóstico de volatilidad generado por el modelo GARCH(1,1) muestra un valor
 
 Para el siguiente periodo (horizon = 1), el modelo predice una media esperada de 2.7063, lo que indica el valor central alrededor del cual se espera que fluctúen los cambios. La predicción constante de la volatilidad se debe a que el modelo asigna un efecto mínimo a los shocks recientes, concentrándose en la estabilidad de la varianza de largo plazo. La volatilidad del 15% no significa “extremadamente alta”, sino que indica que los cambios diarios pueden variar en torno a ±15% de la media esperada. Esto es una variabilidad estable pero moderada, aunque pueden aparecer picos puntuales en algunos días sin alterar la estabilidad general de la serie.
 
+**Hampel filter**
+Para depurar la serie y reducir el efecto de valores atípicos extremos, aplicamos el Hampel Filter, un método que identifica y reemplaza automáticamente los outliers basándose en la mediana y la desviación típica local de la serie. Tras aplicar este filtro, la serie queda más limpia, eliminando picos aislados que podrían distorsionar el análisis de volatilidad. Esto nos permite obtener un pronóstico más fiable, ya que el modelo GARCH no se ve afectado por cambios extraordinarios puntuales que no reflejan la dinámica general de la influencia tecnológica.
+
+ ![HF tec](./imgs/hf_tec.png)
+
+Después calculamos los retornos, que incluso aplicando Hampel Filter, los retornos siguen mostrando valores extramadamente grandes y negativos cercanos a -1. Esto pasa porque tenemos valores muy pequeños o 0 (poca influencia de tecnología) en el denominador.
+
+Al hacer el PACF a la serie filtrada obtenemos una línea plana en 0 la cual indica que no hay clustering de volatilidad, los picos son eventos puntuales, es decir, la volatilidad no depende de los valores anteriores, no hay memoria en la serie.
+
+Volviendo a aplicar GARCH vemos que la influencia tecnológica en el BOE sigue mostrando cambios puntuales, pero con una volatilidad más estable.
+
+Los resultados muestran que los cambios recientes en la serie ahora tienen un efecto moderado, mientras que la volatilidad pasada sigue influyendo, pero de manera menos persistente que en la serie original. Esto refleja que, aunque la serie puede experimentar fluctuaciones aisladas, no se producen rachas prolongadas de alta o baja variabilidad.
+
 ## Conclusiones
 AQUÍ PONER
 hipótesis apoyada o refutada. 
