@@ -43,6 +43,12 @@ Proyecto_Universidades_BOE/
 │   └── DCDC_Preparacion_conjunto_final.ipynb     # Unión de todos los análisis y reconstrucción del dataset final + análisis de hipótesis
 |   └── data_cleaning.md                          # Documentación del proceso de limpieza
 │   └── motivation.md                             # Documento de motivación, hipótesis y justificación
+├── Entrega3/
+│   ├── README.md      # Memoria de la entrega 3
+│   ├── .ipynb      # Notebook con visualizaciones y preparación de los datos
+│   ├── .ipynb                     # Notebook con análisis ARIMAX y SARIMAX
+│   ├── DCDC_GARCH.ipynb               # Notebook con análisis de volatilidad con ARCH  y GARCH
+│   └── indicators_madrid_daily.csv    # Datos para evaluar la hipótesis
 │
 └── README.md                                 # Descripción general del proyecto y estructura del repositorio
 ```
