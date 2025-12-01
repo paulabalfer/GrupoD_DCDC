@@ -34,7 +34,11 @@ En cambio, la volatilidad depende principalmente de la volatilidad pasada, como 
 
 Tras comparar distintas configuraciones del modelo GARCH y probar tanto la distribución normal como la t-Student, observamos que, aunque algunos modelos más complejos pueden ajustar ligeramente mejor, la serie presenta picos puntuales y la volatilidad no tiene memoria fuerte. Por esta razón, para predecir el futuro utilizaremos GARCH(1,1), ya que es suficiente, estable y más fácil de interpretar que modelos con valores mayores de p y q.
 
+ ![Predicciones tec](./imgs/prediccion1_tec.png)
 
+El pronóstico de volatilidad generado por el modelo GARCH(1,1) muestra un valor constante a lo largo del tiempo, con excepción de la primera fecha, que aparece como NaN por no existir información previa para calcularla. Esto ocurre porque, en el modelo ajustado, el parámetro α es prácticamente cero, lo que significa que los cambios recientes en la serie no tienen efecto sobre la volatilidad futura. La volatilidad depende casi exclusivamente del componente constante y de la volatilidad pasada, que en este caso se estabiliza rápidamente en un nivel de largo plazo. Por esta razón, el modelo predice el mismo valor de volatilidad para cada periodo, reflejando que la serie no presenta rachas prolongadas de alta o baja variabilidad, sino episodios puntuales de cambio. Esto concuerda con la observación de que la influencia tecnológica en las disposiciones del BOE presenta picos puntuales pero no rachas prolongadas de variabilidad.
+
+Para el siguiente periodo (horizon = 1), el modelo predice una media esperada de 2.7063, lo que indica el valor central alrededor del cual se espera que fluctúen los cambios. La predicción constante de la volatilidad se debe a que el modelo asigna un efecto mínimo a los shocks recientes, concentrándose en la estabilidad de la varianza de largo plazo. La volatilidad del 15% no significa “extremadamente alta”, sino que indica que los cambios diarios pueden variar en torno a ±15% de la media esperada. Esto es una variabilidad estable pero moderada, aunque pueden aparecer picos puntuales en algunos días sin alterar la estabilidad general de la serie.
 
 ## Conclusiones
 AQUÍ PONER
