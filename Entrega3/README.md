@@ -21,7 +21,7 @@ Para resolver estos problemas se aplicó una estrategia de transformación doble
 - Estabilización de Varianza: Se usó la transformación logarítmica np.log1p sobre las series. Esta es la técnica estándar para estabilizar series con crecimiento exponencial y varianza proporcional a la media.
 - Suavizado: Se aplicó un suavizado de media móvil de 3 días (rolling(3).mean()). Este paso ayudó a atenuar el ruido diario extremo, facilitando la identificación de la estructura estacional y autoregresiva subyacente.
 
-IMAGEN
+ ![Graficos](./imgs/graficos.png)
 
 Se utilizó el Test de Dickey-Fuller Aumentado (ADF) para confirmar que, tras la transformación, se había eliminado la raíz unitaria. Dado que el p-value es significativamente menor que 0.01 en ambos casos, se rechaza la hipótesis nula. Esto valida que las series transformadas son estacionarias. Por consiguiente, el orden de diferenciación no estacional (d) para los modelos ARIMA y SARIMAX se fijó en d=0 (es decir, el modelado se centra en ARMA(p, q)).
 
@@ -33,8 +33,10 @@ El modelo ARMA fue el punto de partida, asumiendo que la autocorrelación de las
 
 A pesar de optimizar el AIC, los resultados de forecast en el conjunto de prueba (Test set) fueron insuficientes. El modelo mostró una subestimación sistemática de los valores reales y una fuerte regresión a la media. Esto es una evidencia clara de que la estacionalidad inherente a la serie diaria (e.g., el ciclo semanal) no estaba siendo capturada.
 
-IMAGEN
+ ![Arima empleo](./imgs/arima_empleo.png)
+ ![Arima tec](./imgs/arima_tec.png)
 
+ 
 ### 2.2.2. SARIMAX 
 Para corregir las deficiencias del ARMA, se implementó el SARIMAX (Seasonal ARIMA with Exogenous Regressors).
 El modelo se especificó para incluir los siguientes componentes:
@@ -45,12 +47,14 @@ El modelo se especificó para incluir los siguientes componentes:
 
 La inclusión de la estacionalidad y las variables exógenas resultó en una mejora significativa. El forecast de SARIMAX fue capaz de seguir con mayor precisión las fluctuaciones periódicas y la tendencia general del conjunto de prueba.
 
-IMAGEN
+ ![Sarimax empleo](./imgs/sarimax_empleo.png)
+ ![Sarimax tec](./imgs/sarimax_tec.png)
 
 ### 2.2.3. Prophet
 Se incluyó el modelo Prophet (desarrollado por Meta) como benchmark, ya que está optimizado para series temporales con datos atípicos, tendencias variables y múltiples estacionalidades. Prophet modela la serie mediante la descomposición de componentes: tendencia, estacionalidad aditiva y efectos de festivos.
 
-IMAGEN
+ ![Prophet empleo](./imgs/prophet_empleo.png)
+ ![Prophet tec](./imgs/prophet_tec.png)
 
 
 ## 2.3 Resultados de Rendimiento 
@@ -60,8 +64,9 @@ La siguiente tabla consolida las métricas clave de los modelos probados:
 
 TABLA RESULTADOS
 
-GRAFICO RESULTADOS
-
+ ![Resultados](./imgs/rmse.png)
+ ![Resultados](./imgs/rmse.png)
+ 
 El análisis demostró que el rendimiento óptimo difiere entre las dos series, requiriendo una estrategia de modelado específica para cada una:
 
 - Modelo ARMA Inadecuado: El bajo rendimiento de los modelos ARMA puros (con el RMSE más alto) confirma que el problema de pronóstico está dominado por la estacionalidad y/o la interdependencia, no solo por la autocorrelación de corto plazo.
