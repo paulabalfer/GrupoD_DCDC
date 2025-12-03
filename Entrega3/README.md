@@ -2,9 +2,56 @@
 
 En esta entrega analizamos nuestros datos teniendo en cuenta la componente temporal. Además, usamos los modelos ARIMAX, SARIMAX, modelos profundos, GARCH y ARCH para contrastar nuestra hipótesis:
 
-Entre 1995 y 2024, la proporción de titulares del BOE relacionados con tecnología en universidades públicas de la Comunidad de Madrid aumenta moderadamente (≈ +1.1% anual), mientras que los relativos a empleo muestran una tendencia variable con disminución general (≈ -2.3% anual), lo que sugiere un cambio gradual de foco institucional desde temas laborales hacia la innovación tecnológica.
+*"Entre 1995 y 2024, la proporción de titulares del BOE relacionados con tecnología en universidades públicas de la Comunidad de Madrid aumenta moderadamente (≈ +1.1% anual), mientras que los relativos a empleo muestran una tendencia variable con disminución general (≈ -2.3% anual), lo que sugiere un cambio gradual de foco institucional desde temas laborales hacia la innovación tecnológica."*
 
-## 1. Visualizaciones
+## 1. Preprocesado y preparación de series temporales
+## 1.1. Preparación de los datos
+Como primer paso de la entrega, procesamos el conjunto de datos (que ya teníamos íntegramente numérico) para encontrar y preparar indicadores temporales que nos ayuden posteriormente a aplicar los modelos de series temporales mencionados. Como se ha dicho, el objetivo de todo ello es confirmar o desmentir la hipótesis que se planteó en la segunda entrega del proyecto (directorio "Entrega 2"), por lo que los indicadores se centran en los aspectos que se mencionan en esta. 
+
+En primer lugar, antes de pasar a definir los indicadores, se hacen algunas comprobaciones para evitar futuros fallos: 
+
+- Se asegura que la columna "Fecha_Publicación", en la que se basarán todos los indicadores, esté en formato *datetime*. En este caso es necesario realizar la conversión específica. 
+- Se comprueba que el conjunto esté ordenado en orden cronológico. 
+
+Una vez hechas las comprobaciones, se definen los indicadores: 
+
+- ***total_count***: suma de todos los titulares presentes para esa fecha o agrupación de fechas. 
+- **Columnas de categoría**: suma de los titulares cuya categoría principal es la indicada en el nombre de la columna para esa fecha o agrupación de fechas. Se dice que un titular cuenta con x categoría principal cuando esta tiene el mayor valor en las columnas de categoría de nuestro conjunto numérico. 
+Por ejemplo, si en nuestro conjunto un titular cuenta con los valores: *{tecnología: 0.65, empleo: 0.25, economía: 0.05, salud: 0.05}* decimos que su categoría principal es **tecnología**. 
+- **Columnas de tipo de entidad**: suma de los titulares para los que la universidad que se menciona es pública o privada (tiene un 1 en dicha columna en el conjunto numérico) para una fecha o agrupación de fechas. 
+- **Columnas de comunidades**: suma de los titulares para los que la universidad que se menciona pertenece a una comunidad específica (tiene un 1 en dicha columna en el conjunto numérico) para una fecha o agrupación de fechas.
+
+Con todo ello entonces, se calcula el conjunto de todos los indicadores para diferentes agrupaciones temporales por separado: **diario, cada 3 días, semanal, mensual, trimestral y anual**. En vista de los tamaños que se obtienen de las agrupaciones nos quedamos con las tres primeras (el conjunto más pequeño cuenta con 1518 datos) para tener datos suficientes en el análisis temporal. 
+
+Por otro lado, y de cara a ir enfocando más el análisis hacia nuestra hipótesis, analizamos qué comunidades cuentan con mayor presencia en los datos y sus tamaños; se demuestra que la Comunidad de Madrid cuenta con el máximo de apariciones (con diferencia considerable de 39 573 apariciones frente a 11 876 de la segunda más frecuente) y por tanto tiene sentido centrar la hipótesis en ella. Se calculan entonces los mismos indicadores que antes (excepto los relacionados con las comunidades) para el nuevo subconjunto de datos de la Comunidad de Madrid y sólo para las tres agrupaciones temporales que se seleccionaron previamente (diaria, cada 3 días y semanal). 
+
+## 1.2. Visualizaciones
+Una vez tenemos los diferentes indicadores calculados para las diferentes agrupaciones, se codifica una función que realiza visualizaciones de los datos en forma de gráficos de líneas. Se representa cada columna en una línea del eje y junto con la variable temporal en el eje x. 
+
+En primer lugar, realizamos una primera visualización de todo el conjunto con todos los indicadores "generales" que se realizaron en primer lugar (sin separación por comunidad).
+
+[IMG <<INDICADORES GENERALES - GRANULARIDAD SEMANAL>>]
+
+De esta primera gráfica obtenemos que resuta muy difícil sacar información útil a simple vista dada la cantidad de columnas (indicadores), por lo que reducimos el conjunto a los indicadores relacionados con nuestra hipótesis inicial (**total_count, tecnología, empleo, publica y Madrid**). Con este nuevo subconjunto, sacamos una segunda gráfica: 
+
+[IMG <<INDICADORES GENERALES COLUMNAS ESPECÍFICAS - GRANULARIDAD SEMANAL>>]
+
+La cual repetimos con las mismas columas en nuestro subconjunto específico de Madrid: 
+
+[IMG <<INDICADORES MADRID - GRANULARIDAD DIARIA>>]
+
+Aunque también ejecutamos una tercera gráfica incluyendo el indicador de universidades privadas (imagen no mostrada pero ubicada en el directorio de */imgs* bajo el nombre <<Indicadores Madrid - Granularidad diaria Extensión>>); confirmamos entonces que la magnitud de apariciones de la universidad privada es bastante mínima comparada con las apariciones de la universidad pública, lo que confirma que tiene sentido también hablar sólo de universidades públicas en la hipótesis. 
+
+Con todo ello, parece que estas visualizaciones ya sí nos pueden llevar a información útil; visualizamos entonces cada una de las agregaciones temporales de la versión general de indicadores (todas las agregaciones, no sólo las seleccionadas) para tener una primera aproximación de cuál nos puede resultar más útil. 
+
+[IMG <<COLLAGE INDICADORES>>]
+
+De todas estas gráficas sacamos entonces lo que ya habíamos supuesto numéricamente; las visualizaciones muestran de manera más clara que a partir de una granularidad semanal no tenemos datos suficientes para el análisis de nuestra serie temporal. Una vez hecho todo este estudio y demostradas las decisiones que nos llevan a elegir los temas que se mencionan en la hipótesis, se realizan unas últimas visualizaciones de cada una de las agregaciones seleccionadas para los conjuntos de indicadores de la Comunidad de Madrid (únicamente de las columnas asociadas a la hipótesis) tal y como se muestra en el siguiente ejemplo: 
+
+[IMG <<INDICADORES MADRID - GRANULARIDAD SEMANAL>>]
+
+Con esta última gráfica vemos que los datos a los que la hipótesis resume el conjunto pareces suficientes (en su máxima agrupación) y por tanto parecen susceptibles a un análisis temporal más extenso como veremos en secciones posteriores. Además, en la imagen parece confirmarse nuestra hipótesis (aunque sin datos numéricos) de que la tecnología empieza a estar más presente en el BOE; el color azul empieza a mostrarse con valores más altos con el paso del tiempo (en la parte derecha de la gráfica) mientras que el color naranja (empleo) pasa más desapercibido. 
+
 
 ## 2. ARIMAX y SARIMAX
 El objetivo de esta sección es modelar y pronosticar el nivel de actividad diaria de los indicadores empleo_sum y tecnología_sum. Se comparan tres enfoques principales: los modelos autorregresivos clásicos ARMA, los modelos estacionales con variables exógenas SARIMAX, y el enfoque no lineal de Prophet.
