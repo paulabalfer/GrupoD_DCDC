@@ -62,8 +62,7 @@ La selección final del modelo se basó en el Root Mean Square Error (RMSE), una
 
 La siguiente tabla consolida las métricas clave de los modelos probados:
 
-TABLA RESULTADOS
-
+ ![Tabla](./imgs/tabla.png)
  ![Resultados](./imgs/rmse.png)
  ![Resultados](./imgs/rmse.png)
  
