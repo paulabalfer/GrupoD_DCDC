@@ -5,7 +5,7 @@ En esta entrega analizamos nuestros datos teniendo en cuenta la componente tempo
 *"Entre 1995 y 2024, la proporción de titulares del BOE relacionados con tecnología en universidades públicas de la Comunidad de Madrid aumenta moderadamente (≈ +1.1% anual), mientras que los relativos a empleo muestran una tendencia variable con disminución general (≈ -2.3% anual), lo que sugiere un cambio gradual de foco institucional desde temas laborales hacia la innovación tecnológica."*
 
 ## 1. Preprocesado y preparación de series temporales
-## 1.1. Preparación de los datos
+### 1.1. Preparación de los datos
 Como primer paso de la entrega, procesamos el conjunto de datos (que ya teníamos íntegramente numérico) para encontrar y preparar indicadores temporales que nos ayuden posteriormente a aplicar los modelos de series temporales mencionados. Como se ha dicho, el objetivo de todo ello es confirmar o desmentir la hipótesis que se planteó en la segunda entrega del proyecto (directorio "Entrega 2"), por lo que los indicadores se centran en los aspectos que se mencionan en esta. 
 
 En primer lugar, antes de pasar a definir los indicadores, se hacen algunas comprobaciones para evitar futuros fallos: 
@@ -25,12 +25,13 @@ Con todo ello entonces, se calcula el conjunto de todos los indicadores para dif
 
 Por otro lado, y de cara a ir enfocando más el análisis hacia nuestra hipótesis, analizamos qué comunidades cuentan con mayor presencia en los datos y sus tamaños; se demuestra que la Comunidad de Madrid cuenta con el máximo de apariciones (con diferencia considerable de 39 573 apariciones frente a 11 876 de la segunda más frecuente) y por tanto tiene sentido centrar la hipótesis en ella. Se calculan entonces los mismos indicadores que antes (excepto los relacionados con las comunidades) para el nuevo subconjunto de datos de la Comunidad de Madrid y sólo para las tres agrupaciones temporales que se seleccionaron previamente (diaria, cada 3 días y semanal). 
 
-## 1.2. Visualizaciones
+### 1.2. Visualizaciones
 Una vez tenemos los diferentes indicadores calculados para las diferentes agrupaciones, se codifica una función que realiza visualizaciones de los datos en forma de gráficos de líneas. Se representa cada columna en una línea del eje y junto con la variable temporal en el eje x. 
 
 En primer lugar, realizamos una primera visualización de todo el conjunto con todos los indicadores "generales" que se realizaron en primer lugar (sin separación por comunidad).
 
 [IMG <<INDICADORES GENERALES - GRANULARIDAD SEMANAL>>]
+![Indicadores Generales - Granularidad Semanal](./imgs/Indicadores generales - Granularidad Semanal.png)
 
 De esta primera gráfica obtenemos que resuta muy difícil sacar información útil a simple vista dada la cantidad de columnas (indicadores), por lo que reducimos el conjunto a los indicadores relacionados con nuestra hipótesis inicial (**total_count, tecnología, empleo, publica y Madrid**). Con este nuevo subconjunto, sacamos una segunda gráfica: 
 
