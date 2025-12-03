@@ -46,7 +46,7 @@ Proyecto_Universidades_BOE/
 ├── Entrega3/
 │   ├── README.md      # Memoria de la entrega 3
 │   ├── .ipynb      # Notebook con visualizaciones y preparación de los datos
-│   ├── .ipynb                     # Notebook con análisis ARIMAX y SARIMAX
+│   ├── DCDC_P3_ARIMA_SARIMAX_PROPHET.ipynb      # Notebook con análisis ARIMAX y SARIMAX
 │   ├── DCDC_GARCH.ipynb               # Notebook con análisis de volatilidad con ARCH  y GARCH
 │   └── indicators_madrid_daily.csv    # Datos para evaluar la hipótesis
 │
