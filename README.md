@@ -27,8 +27,8 @@ Proyecto_Universidades_BOE/
 │
 ├── Entrega2/
 │   ├── Indicadores obligatorios/
-│   │   ├── DCDC_Análisis_Volumen.ipynb       # Análisis del volumen temporal de publicaciones
-│   │   └── DCDC_Análisis_sentimiento.ipynb   # Análisis de sentimiento con modelos en español
+│   │   ├── DCDC_Análisis_Volumen.ipynb          # Análisis del volumen temporal de publicaciones
+│   │   └── DCDC_Análisis_sentimiento.ipynb      # Análisis de sentimiento con modelos en español
 │   │   └── DCDC_Análisis_de_tópicos_LDA.ipynb   # Análisis de sentimiento con modelos en español
 │   │
 │   ├── Indicadores opcionales/
@@ -37,18 +37,19 @@ Proyecto_Universidades_BOE/
 |   |   └── DCDC_Modelos_Zeroshot_Learning.ipynb    # Clasificación y análisis por temática con modelos asistidos por LLMs
 │   │
 │   ├── Limpieza de datos/
-│   │   └── DCDC_E2_EDA.ipynb            # Exploración y limpieza de datos
+│   │   └── DCDC_E2_EDA.ipynb                     # Exploración y limpieza de datos
 │   │
 │   └── img_e2/                                   # Carpeta con imágenes y gráficos generados 
 │   └── DCDC_Preparacion_conjunto_final.ipynb     # Unión de todos los análisis y reconstrucción del dataset final + análisis de hipótesis
 |   └── data_cleaning.md                          # Documentación del proceso de limpieza
 │   └── motivation.md                             # Documento de motivación, hipótesis y justificación
 ├── Entrega3/
-│   ├── README.md      # Memoria de la entrega 3
-│   ├── .ipynb      # Notebook con visualizaciones y preparación de los datos
+│   ├── imgs/                                    # Carpeta con imágenes y gráficos generados 
+│   ├── analysis.md                              # Memoria de la entrega 3
+│   ├── DCDC_P3_Preprocesado_Datos.ipynb         # Notebook con visualizaciones y preparación de los datos
 │   ├── DCDC_P3_ARIMA_SARIMAX_PROPHET.ipynb      # Notebook con análisis ARIMAX y SARIMAX
-│   ├── DCDC_GARCH.ipynb               # Notebook con análisis de volatilidad con ARCH  y GARCH
-│   └── indicators_madrid_daily.csv    # Datos para evaluar la hipótesis
+│   ├── DCDC_P3_GARCH.ipynb                      # Notebook con análisis de volatilidad con ARCH  y GARCH
+│   └── indicators_madrid_daily.csv              # Datos para evaluar la hipótesis
 │
 └── README.md                                 # Descripción general del proyecto y estructura del repositorio
 ```
