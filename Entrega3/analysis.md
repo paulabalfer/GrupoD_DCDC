@@ -1,6 +1,8 @@
 # Entrega 3: Análisis temporal de las disposiciones del BOE
 
-En esta entrega analizamos nuestros datos teniendo en cuenta la componente temporal. Además, usamos los modelos ARIMAX, SARIMAX, modelos profundos, GARCH y ARCH para contrastar nuestra hipótesis:
+En esta entrega analizamos nuestros datos teniendo en cuenta la componente temporal. Para el primer paso (y primer archivo) se parte del conjunto resultado de la entrega 2 (*"data/processed/dataset_boe_universidades_processed.csv"*) y todos los archivos intermedios necesarios se van generando automáticamente con la ejecución de los diferentes notebooks. Aun así, se alojan los csvs intermedios en el directorio *"data/indicators/"* para que no sea necesario ejecutar el primer archivo de procesado y tener ya los subconjuntos de datos necesarios. 
+
+Además, usamos los modelos ARIMAX, SARIMAX, modelos profundos, GARCH y ARCH para contrastar nuestra hipótesis:
 
 *"Entre 1995 y 2024, la proporción de titulares del BOE relacionados con tecnología en universidades públicas de la Comunidad de Madrid aumenta moderadamente (≈ +1.1% anual), mientras que los relativos a empleo muestran una tendencia variable con disminución general (≈ -2.3% anual), lo que sugiere un cambio gradual de foco institucional desde temas laborales hacia la innovación tecnológica."*
 
@@ -111,7 +113,6 @@ La selección final del modelo se basó en el Root Mean Square Error (RMSE), una
 La siguiente tabla consolida las métricas clave de los modelos probados:
 
  ![Tabla](./imgs/tabla.png)
- ![Resultados](./imgs/rmse.png)
  ![Resultados](./imgs/rmse.png)
  
 El análisis demostró que el rendimiento óptimo difiere entre las dos series, requiriendo una estrategia de modelado específica para cada una:
