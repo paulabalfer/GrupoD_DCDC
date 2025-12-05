@@ -16,7 +16,10 @@ Proyecto_Universidades_BOE/
 |   ├── raw/
 |   |   └── dataset_boe_universidades.csv               # Conjunto de datos original (Resultado de la entrega 1) 
 |   └── processed/
-|       └── dataset_boe_universidades_processed.csv     # Conjunto de datos procesado y exclusivamente numérico (Resultado de la entrega 2)
+|   |   └── dataset_boe_universidades_processed.csv     # Conjunto de datos procesado y exclusivamente numérico (Resultado de la entrega 2)
+|   └── indicators/
+|       └── indicators_madrid_dayly.csv                 # Conjunto de datos con variable temporal diaria procesada (Archivo intermedio necesario en la entrega 3)
+|       └── indicators_madrid_annual.csv                # Conjunto de datos con variable temporal anual procesada (Archivo intermedio necesario en la entrega 3)
 |
 ├── Entrega1/
 │   ├── LICENSE
@@ -48,8 +51,7 @@ Proyecto_Universidades_BOE/
 │   ├── analysis.md                              # Memoria de la entrega 3
 │   ├── DCDC_P3_Preprocesado_Datos.ipynb         # Notebook con visualizaciones y preparación de los datos
 │   ├── DCDC_P3_ARIMA_SARIMAX_PROPHET.ipynb      # Notebook con análisis ARIMAX y SARIMAX
-│   ├── DCDC_P3_GARCH.ipynb                      # Notebook con análisis de volatilidad con ARCH  y GARCH
-│   └── indicators_madrid_daily.csv              # Datos para evaluar la hipótesis
+│   └── DCDC_P3_GARCH.ipynb                      # Notebook con análisis de volatilidad con ARCH  y GARCH
 │
 └── README.md                                 # Descripción general del proyecto y estructura del repositorio
 ```
