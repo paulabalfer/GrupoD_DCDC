@@ -34,21 +34,21 @@ En primer lugar, realizamos una primera visualización de todo el conjunto con t
 
 De esta primera gráfica obtenemos que resuta muy difícil sacar información útil a simple vista dada la cantidad de columnas (indicadores), por lo que reducimos el conjunto a los indicadores relacionados con nuestra hipótesis inicial (**total_count, tecnología, empleo, publica y Madrid**). Con este nuevo subconjunto, sacamos una segunda gráfica: 
 
-[IMG <<INDICADORES GENERALES COLUMNAS ESPECÍFICAS - GRANULARIDAD SEMANAL>>]
+![Indicadores generales columnas específicas](./imgs/Indicadores-generales-columnas-específicas-Granularidad-semanal.png)
 
 La cual repetimos con las mismas columas en nuestro subconjunto específico de Madrid: 
 
-[IMG <<INDICADORES MADRID - GRANULARIDAD DIARIA>>]
+![Indicadores Madrid granularidad diaria](./imgs/Indicadores-Madrid-Granularidad-diaria.png)
 
 Aunque también ejecutamos una tercera gráfica incluyendo el indicador de universidades privadas (imagen no mostrada pero ubicada en el directorio de */imgs* bajo el nombre <<Indicadores Madrid - Granularidad diaria Extensión>>); confirmamos entonces que la magnitud de apariciones de la universidad privada es bastante mínima comparada con las apariciones de la universidad pública, lo que confirma que tiene sentido también hablar sólo de universidades públicas en la hipótesis. 
 
 Con todo ello, parece que estas visualizaciones ya sí nos pueden llevar a información útil; visualizamos entonces cada una de las agregaciones temporales de la versión general de indicadores (todas las agregaciones, no sólo las seleccionadas) para tener una primera aproximación de cuál nos puede resultar más útil. 
 
-[IMG <<COLLAGE INDICADORES>>]
+![Collage indicadores columnas específicas](./imgs/Indicadores-columnas-específicas.png)
 
 De todas estas gráficas sacamos entonces lo que ya habíamos supuesto numéricamente; las visualizaciones muestran de manera más clara que a partir de una granularidad semanal no tenemos datos suficientes para el análisis de nuestra serie temporal. Una vez hecho todo este estudio y demostradas las decisiones que nos llevan a elegir los temas que se mencionan en la hipótesis, se realizan unas últimas visualizaciones de cada una de las agregaciones seleccionadas para los conjuntos de indicadores de la Comunidad de Madrid (únicamente de las columnas asociadas a la hipótesis) tal y como se muestra en el siguiente ejemplo: 
 
-[IMG <<INDICADORES MADRID - GRANULARIDAD SEMANAL>>]
+![Indicadores madrid granularidad semanal](./imgs/Indicadores-Madrid-Granularidad-semanal.png)
 
 Con esta última gráfica vemos que los datos a los que la hipótesis resume el conjunto pareces suficientes (en su máxima agrupación) y por tanto parecen susceptibles a un análisis temporal más extenso como veremos en secciones posteriores. Además, en la imagen parece confirmarse nuestra hipótesis (aunque sin datos numéricos) de que la tecnología empieza a estar más presente en el BOE; el color azul empieza a mostrarse con valores más altos con el paso del tiempo (en la parte derecha de la gráfica) mientras que el color naranja (empleo) pasa más desapercibido. 
 
