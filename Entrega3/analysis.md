@@ -226,6 +226,14 @@ La pendiente anual de la influencia de tecnología ha disminuido ligeramente en 
 En cuanto al empleo, la pendiente anual de empleo es de -23.8645, es decir, que disminuye fuertemente cada año, más de lo esperado en nuestra hipótesis. El p-valor = 0.0000 indica que la tendencia decreciente es real y consistente.
 
 ## Conclusiones
-AQUÍ PONER
-hipótesis apoyada o refutada. 
-▪ Limitaciones y posibles mejoras. 
+
+El análisis anual refuta la parte de la hipótesis relativa al crecimiento tecnológico, pero apoya fuertemente la disminución en la influencia del empleo. Por lo tanto, el cambio de foco institucional no se confirma como un simple reemplazo de "empleo" por "tecnología", sino como una disminución sistémica del foco en temas laborales a lo largo de las últimas tres décadas.
+
+### Limitaciones
+
+- Granularidad y Significancia Anual: La regresión lineal anual se basa en solo N=30 puntos de datos, lo que, a pesar de ser un periodo largo, limita la potencia para detectar una tendencia sutil como el +1.1% propuesto para tecnología.
+- Sesgo en el Indicador Temático (Zero-shot): La precisión del análisis depende de que la clasificación Zero-shot haya identificado correctamente la categoría principal. Errores en la clasificación o la uniformidad léxica del BOE podrían estar enmascarando una tendencia más sutil en tecnología
+
+### Mejoras
+
+- Análisis Intermedio de Tendencia: Aplicar regresión lineal a las series mensuales o trimestrales (en lugar de solo anuales) para aumentar el número de puntos de datos ($N > 30$) y ganar potencia estadística, mientras se mitiga el ruido diario.
