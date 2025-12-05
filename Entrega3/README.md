@@ -30,7 +30,7 @@ Una vez tenemos los diferentes indicadores calculados para las diferentes agrupa
 
 En primer lugar, realizamos una primera visualización de todo el conjunto con todos los indicadores "generales" que se realizaron en primer lugar (sin separación por comunidad).
 
-![Indicadores generales](./imgs/'Indicadores generales - Granularidad Semanal.png')
+![Indicadores generales](./imgs/Indicadores-generales-Granularidad-Semanal.png)
 
 De esta primera gráfica obtenemos que resuta muy difícil sacar información útil a simple vista dada la cantidad de columnas (indicadores), por lo que reducimos el conjunto a los indicadores relacionados con nuestra hipótesis inicial (**total_count, tecnología, empleo, publica y Madrid**). Con este nuevo subconjunto, sacamos una segunda gráfica: 
 
