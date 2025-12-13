@@ -2,8 +2,9 @@
 
 El repositorio está organizado en dos entregas principales:
 
-- **Entrega 1:** Preparación del dataset, extracción de datos y documentación técnica.  
-- **Entrega 2:** Cálculo de indicadores (obligatorios y opcionales), limpieza de datos y análisis motivacional.  
+- **Extracción de datos y creación de dataset:** Preparación del dataset, extracción de datos y documentación técnica.  
+- **Indicadores e hipótesis:** Cálculo de indicadores (obligatorios y opcionales), limpieza de datos y análisis motivacional.
+- **Análisis temporal:** Análisis de volatilidad y tendencias temporales.
 
 Cada carpeta contiene tanto los **notebooks de análisis** como los **documentos de apoyo y resultados**.
 
@@ -21,14 +22,14 @@ Proyecto_Universidades_BOE/
 |       └── indicators_madrid_dayly.csv                 # Conjunto de datos con variable temporal diaria procesada (Archivo intermedio necesario en la entrega 3)
 |       └── indicators_madrid_annual.csv                # Conjunto de datos con variable temporal anual procesada (Archivo intermedio necesario en la entrega 3)
 |
-├── Entrega1/
+├── Extracción de datos y creación de dataset/
 │   ├── LICENSE
 │   ├── README.md
 │   ├── extraccion_datos_boe.py         # Script para la extracción y descarga de datos del BOE
 │   ├── metadata.md                     # Descripción técnica del dataset y su estructura
 │   └── requirements.txt                # Librerías necesarias para ejecutar el proyecto
 │
-├── Entrega2/
+├── Indicadores e hipótesis/
 │   ├── Indicadores obligatorios/
 │   │   ├── DCDC_Análisis_Volumen.ipynb          # Análisis del volumen temporal de publicaciones
 │   │   └── DCDC_Análisis_sentimiento.ipynb      # Análisis de sentimiento con modelos en español
@@ -46,12 +47,13 @@ Proyecto_Universidades_BOE/
 │   └── DCDC_Preparacion_conjunto_final.ipynb     # Unión de todos los análisis y reconstrucción del dataset final + análisis de hipótesis
 |   └── data_cleaning.md                          # Documentación del proceso de limpieza
 │   └── motivation.md                             # Documento de motivación, hipótesis y justificación
-├── Entrega3/
+├── Análisis temporal/
 │   ├── imgs/                                    # Carpeta con imágenes y gráficos generados 
 │   ├── analysis.md                              # Memoria de la entrega 3
 │   ├── DCDC_P3_Preprocesado_Datos.ipynb         # Notebook con visualizaciones y preparación de los datos
 │   ├── DCDC_P3_ARIMA_SARIMAX_PROPHET.ipynb      # Notebook con análisis ARIMAX y SARIMAX
 │   └── DCDC_P3_GARCH.ipynb                      # Notebook con análisis de volatilidad con ARCH  y GARCH
 │
-└── README.md                                 # Descripción general del proyecto y estructura del repositorio
+├── README.md                                    # Descripción general del proyecto y estructura del repositorio
+└── ProyectoFinal.md                             # Entrega 4. Descripción del proyecto final completo.
 ```
