@@ -71,7 +71,7 @@ Para resolver estos problemas se aplicó una estrategia de transformación doble
 - Estabilización de Varianza: Se usó la transformación logarítmica np.log1p sobre las series. Esta es la técnica estándar para estabilizar series con crecimiento exponencial y varianza proporcional a la media.
 - Suavizado: Se aplicó un suavizado de media móvil de 3 días (rolling(3).mean()). Este paso ayudó a atenuar el ruido diario extremo, facilitando la identificación de la estructura estacional y autoregresiva subyacente.
 
- ![Graficos](./imgs/graficos.png)
+ ![Graficos](./imgs/grafico.png)
 
 Se utilizó el Test de Dickey-Fuller Aumentado (ADF) para confirmar que, tras la transformación, se había eliminado la raíz unitaria. Dado que el p-value es significativamente menor que 0.01 en ambos casos, se rechaza la hipótesis nula. Esto valida que las series transformadas son estacionarias. Por consiguiente, el orden de diferenciación no estacional (d) para los modelos ARIMA y SARIMAX se fijó en d=0 (es decir, el modelado se centra en ARMA(p, q)).
 
