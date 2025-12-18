@@ -1,5 +1,9 @@
 # Estructura del Repositorio y Reproducibilidad
 
+## Descripción del proyecto
+
+AQUÏ EL ABSTRACR PAULA
+
 ## Instrucciones de Reproducción
 
 Para reproducir este proyecto desde cero, sigue este orden de ejecución:
@@ -24,6 +28,25 @@ pip install -r requirements.txt
 python -m nltk.downloader stopwords punkt wordnet omw-1.4 vader_lexicon
 ```
 
+### 2. Generación del Dataset (Entrega 1 y 2)
+> **Nota:** Si has descargado los datos de Hugging Face, puedes saltar al paso 3.
+
+1.  **Extracción:** Ejecuta `Extracción de datos y creación de dataset/extraccion_datos_boe.py` para descargar los datos crudos.
+2.  **Limpieza:** Ejecuta `Indicadores e hipótesis/Limpieza de datos/DCDC_E2_EDA.ipynb`.
+
+### 3. Generación de Indicadores (Entrega 3)
+Una vez tengas los datos procesados, ejecuta los notebooks para generar las métricas:
+
+1.  **Indicadores Obligatorios:** Ejecuta los notebooks dentro de `Indicadores e hipótesis/Indicadores obligatorios/` (Volumen, Sentimiento, Tópicos).
+2.  **Consolidación:** Ejecuta `Indicadores e hipótesis/DCDC_Preparacion_conjunto_final.ipynb` para unir todas las métricas en el dataset final.
+
+### 4. Modelos Temporales (Entrega Final)
+Con el dataset final listo, ejecuta los modelos predictivos:
+
+1.  **Preprocesado temporal:** Ejecuta `Análisis temporal/DCDC_P3_Preprocesado_Datos.ipynb`.
+2.  **Modelos:** Ejecuta los notebooks `Análisis temporal/DCDC_P3_ARIMA_SARIMAX_PROPHET.ipynb` y `Análisis temporal/DCDC_P3_GARCH.ipynb`.
+
+## Estructura del repositorio
 El repositorio está organizado en dos entregas principales:
 
 - **Extracción de datos y creación de dataset:** Preparación del dataset, extracción de datos y documentación técnica.  
