@@ -53,7 +53,7 @@ El repositorio está organizado en dos entregas principales:
 - **Indicadores e hipótesis:** Cálculo de indicadores (obligatorios y opcionales), limpieza de datos y análisis motivacional.
 - **Análisis temporal:** Análisis de volatilidad y tendencias temporales.
 
-Cada carpeta contiene tanto los **notebooks de análisis** como los **documentos de apoyo y resultados**.
+Cada carpeta contiene tanto los **notebooks de análisis** como los **documentos de apoyo y resultados** (incluyendo gráficas e imágenes).
 
 La estructura sería:
 
