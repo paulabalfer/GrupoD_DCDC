@@ -19,15 +19,15 @@ Proyecto_Universidades_BOE/
 |   └── processed/
 |   |   └── dataset_boe_universidades_processed.csv     # Conjunto de datos procesado y exclusivamente numérico (Resultado de la entrega 2)
 |   └── indicators/
-|       └── indicators_madrid_dayly.csv                 # Conjunto de datos con variable temporal diaria procesada (Archivo intermedio necesario en la entrega 3)
+|       └── indicators_madrid_daily.csv                 # Conjunto de datos con variable temporal diaria procesada (Archivo intermedio necesario en la entrega 3)
 |       └── indicators_madrid_annual.csv                # Conjunto de datos con variable temporal anual procesada (Archivo intermedio necesario en la entrega 3)
 |
 ├── Extracción de datos y creación de dataset/
 │   ├── LICENSE
 │   ├── README.md
 │   ├── extraccion_datos_boe.py         # Script para la extracción y descarga de datos del BOE
-│   ├── metadata.md                     # Descripción técnica del dataset y su estructura
-│   └── requirements.txt                # Librerías necesarias para ejecutar el proyecto
+│   └── metadata.md                     # Descripción técnica del dataset y su estructura
+│    
 │
 ├── Indicadores e hipótesis/
 │   ├── Indicadores obligatorios/
@@ -55,5 +55,6 @@ Proyecto_Universidades_BOE/
 │   └── DCDC_P3_GARCH.ipynb                      # Notebook con análisis de volatilidad con ARCH  y GARCH
 │
 ├── README.md                                    # Descripción general del proyecto y estructura del repositorio
-└── ProyectoFinal.md                             # Entrega 4. Descripción del proyecto final completo.
+├── requirements.txt                # Librerías necesarias para ejecutar el proyecto
+└── Report.pdf                                   # Entrega 4. Descripción del proyecto final completo.
 ```
