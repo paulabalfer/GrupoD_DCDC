@@ -33,7 +33,7 @@ Proyecto_Universidades_BOE/
 │   ├── Indicadores obligatorios/
 │   │   ├── DCDC_Análisis_Volumen.ipynb          # Análisis del volumen temporal de publicaciones
 │   │   └── DCDC_Análisis_sentimiento.ipynb      # Análisis de sentimiento con modelos en español
-│   │   └── DCDC_Análisis_de_tópicos_LDA.ipynb   # Análisis de sentimiento con modelos en español
+│   │   └── DCDC_Análisis_de_tópicos_LDA.ipynb   # Modelado de tópicos con LDA
 │   │
 │   ├── Indicadores opcionales/
 │   │   └── DCDC_Pública_Privada.ipynb              # Clasificación y análisis por tipo de universidad
@@ -54,6 +54,8 @@ Proyecto_Universidades_BOE/
 │   ├── DCDC_P3_ARIMA_SARIMAX_PROPHET.ipynb      # Notebook con análisis ARIMAX y SARIMAX
 │   └── DCDC_P3_GARCH.ipynb                      # Notebook con análisis de volatilidad con ARCH  y GARCH
 │
+├── .gitignore                                   # Archivos excluidos del control de versiones
+├── LICENSE                                      # Licencia del proyecto
 ├── README.md                                    # Descripción general del proyecto y estructura del repositorio
 ├── requirements.txt                # Librerías necesarias para ejecutar el proyecto
 └── Report.pdf                                   # Entrega 4. Descripción del proyecto final completo.
