@@ -34,13 +34,13 @@ python -m nltk.downloader stopwords punkt wordnet omw-1.4 vader_lexicon
 1.  **Extracción:** Ejecuta `Extracción de datos y creación de dataset/extraccion_datos_boe.py` para descargar los datos crudos.
 2.  **Limpieza:** Ejecuta `Indicadores e hipótesis/Limpieza de datos/DCDC_E2_EDA.ipynb`.
 
-### 3. Generación de Indicadores (Entrega 3)
+### 3. Generación de Indicadores (Entrega 2)
 Una vez tengas los datos procesados, ejecuta los notebooks para generar las métricas:
 
 1.  **Indicadores Obligatorios:** Ejecuta los notebooks dentro de `Indicadores e hipótesis/Indicadores obligatorios/` (Volumen, Sentimiento, Tópicos).
 2.  **Consolidación:** Ejecuta `Indicadores e hipótesis/DCDC_Preparacion_conjunto_final.ipynb` para unir todas las métricas en el dataset final.
 
-### 4. Modelos Temporales (Entrega Final)
+### 4. Modelos Temporales (Entrega 3)
 Con el dataset final listo, ejecuta los modelos predictivos:
 
 1.  **Preprocesado temporal:** Ejecuta `Análisis temporal/DCDC_P3_Preprocesado_Datos.ipynb`.
