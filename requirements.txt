@@ -1,3 +1,32 @@
-mamam
+# --- Tratamiento de Datos y Matemáticas ---
+pandas
+numpy
+scipy
 
+# --- Extracción de Datos (Web Scraping) ---
+requests
+beautifulsoup4
 
+# --- Visualización ---
+matplotlib
+seaborn
+
+# --- Series Temporales y Modelos Financieros ---
+statsmodels    # Para ARIMA, SARIMAX y tests estadísticos
+prophet        # Para el modelo Prophet de Facebook
+arch           # Para modelos de volatilidad (GARCH)
+
+# --- Mapas y Geoespacial ---
+geopandas
+folium
+mapclassify
+
+# --- Machine Learning y NLP ---
+scikit-learn
+nltk
+gensim
+pyLDAvis
+
+# --- Deep Learning (Hugging Face) ---
+transformers
+torch
