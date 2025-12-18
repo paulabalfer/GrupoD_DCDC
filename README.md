@@ -57,6 +57,6 @@ Proyecto_Universidades_BOE/
 ├── .gitignore                                   # Archivos excluidos del control de versiones
 ├── LICENSE                                      # Licencia del proyecto
 ├── README.md                                    # Descripción general del proyecto y estructura del repositorio
-├── requirements.txt                # Librerías necesarias para ejecutar el proyecto
+├── requirements.txt                             # Librerías necesarias para ejecutar el proyecto
 └── Report.pdf                                   # Entrega 4. Descripción del proyecto final completo.
 ```
