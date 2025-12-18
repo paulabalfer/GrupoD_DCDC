@@ -1,8 +1,9 @@
 # Estructura del Repositorio y Reproducibilidad
 
-## Descripción del proyecto
+## Descripción/Resumen del proyecto
 
-AQUÏ EL ABSTRACR PAULA
+El proyecto analiza la evolución del discurso institucional de las universidades públicas de la Comunidad de Madrid a través del Boletín Oficial del Estado (BOE) entre 1995 y 2024, con el objetivo de identificar posibles cambios de prioridad entre temáticas laborales y tecnológicas. Se construye un corpus de 162.576 resoluciones del Ministerio de Universidades, extraídas de los sumarios diarios del BOE y procesadas mediante técnicas de limpieza, normalización y agregación temporal. La clasificación temática de los titulares se realiza mediante modelos de *Zero-Shot learning*, combinada con extracción de entidades, geolocalización y filtrado específico para universidades públicas madrileñas. El análisis se apoya en modelos de series temporales (ARMA, SARIMAX y Prophet), regresión lineal anual y modelos GARCH para estudiar tanto tendencias como volatilidad. Los resultados muestran una caída estadísticamente significativa y estructural de la presencia de temas relacionados con el empleo, mientras que la temática tecnológica no presenta una tendencia creciente y se comporta de forma errática, indistinguible del azar. En conjunto, los hallazgos refutan la hipótesis de un reemplazo gradual del empleo por la innovación tecnológica y apuntan, en cambio, a una retirada unilateral del foco laboral sin una consolidación paralela del discurso tecnológico en la agenda normativa universitaria.
+
 
 ## Instrucciones de Reproducción
 
