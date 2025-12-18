@@ -1,4 +1,28 @@
-# Estructura del Repositorio
+# Estructura del Repositorio y Reproducibilidad
+
+## Instrucciones de Reproducción
+
+Para reproducir este proyecto desde cero, sigue este orden de ejecución:
+
+## Acceso a los Datos (Hugging Face)
+
+El dataset completo y procesado está disponible públicamente en Hugging Face. Esto permite replicar los notebooks de análisis sin necesidad de ejecutar nuevamente la extracción de datos crudos.
+
+[![Hugging Face](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Dataset-yellow)](https://huggingface.co/datasets/pauDCDC/boe_universidades)
+
+🔗 **Enlace directo:** [pauDCDC/boe_universidades](https://huggingface.co/datasets/pauDCDC/boe_universidades)
+
+---
+
+### 1. Configuración del Entorno
+Clona el repositorio e instala las dependencias necesarias:
+
+```bash
+git clone [https://github.com/paulabalfer/GrupoD_DCDC.git](https://github.com/paulabalfer/GrupoD_DCDC.git)
+cd GrupoD_DCDC
+pip install -r requirements.txt
+python -m nltk.downloader stopwords punkt wordnet omw-1.4 vader_lexicon
+```
 
 El repositorio está organizado en dos entregas principales:
 
